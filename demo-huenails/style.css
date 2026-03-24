@@ -1091,3 +1091,213 @@ img { max-width: 100%; display: block; }
     transition: opacity 0.3s ease;
 }
 .nav-overlay.active { display: block; opacity: 1; }
+
+/* =====================================================
+   NAGELLACK-INTRO ANIMATION
+   ===================================================== */
+
+/* Full-screen overlay */
+#nail-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse 80% 60% at 50% 55%, #3d1515 0%, #1e0909 60%, #0e0404 100%);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Subtle vignette */
+#nail-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 35% at 50% 50%, rgba(200,80,80,0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+/* Slide-up exit */
+#nail-intro.intro-exit {
+    animation: introSlideUp 0.85s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes introSlideUp {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-100%); }
+}
+
+/* Scene — the centered stage */
+.intro-scene {
+    position: relative;
+    width: min(860px, 88vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0 32px;
+}
+
+/* ---- Brush ---- */
+.intro-brush {
+    position: absolute;
+    width: 46px;
+    height: 212px;
+    /* tip (bottom of SVG) sits just above text center-line */
+    top: calc(50% - 220px);
+    left: -8%;
+    transform: rotate(22deg);
+    transform-origin: 50% 4%;
+    z-index: 5;
+    filter:
+        drop-shadow(4px 8px 22px rgba(0,0,0,0.7))
+        drop-shadow(0 0 14px rgba(200,64,128,0.38));
+    animation:
+        brushIn    0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both,
+        brushPaint 2.0s  cubic-bezier(0.4,  0,    0.6,  1) 0.9s  both;
+}
+
+.intro-brush svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes brushIn {
+    from { opacity: 0; top: calc(50% - 270px); }
+    to   { opacity: 1; top: calc(50% - 220px); }
+}
+
+@keyframes brushPaint {
+    from { left: -8%;  }
+    to   { left: 108%; }
+}
+
+/* ---- Paint trail underline ---- */
+.intro-text-container {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.intro-text-container::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, #c94080 0%, rgba(200,64,128,0.25) 100%);
+    border-radius: 2px;
+    clip-path: inset(0 100% 0 0);
+    animation: textReveal 2.0s cubic-bezier(0.4, 0, 0.6, 1) 0.9s both;
+}
+
+/* ---- Welcome text (revealed left → right) ---- */
+.intro-welcome-text {
+    font-family: 'Dancing Script', 'Brush Script MT', cursive;
+    font-size: clamp(3.2rem, 9vw, 6.2rem);
+    font-weight: 700;
+    color: #f0c8c8;
+    margin: 0;
+    white-space: nowrap;
+    clip-path: inset(0 100% 0 0);
+    animation: textReveal 2.0s cubic-bezier(0.4, 0, 0.6, 1) 0.9s both;
+    text-shadow:
+        0 2px 0   rgba(80, 15, 15, 0.55),
+        0 4px 0   rgba(60,  8,  8, 0.45),
+        0 8px 22px rgba(0,  0,  0, 0.55),
+        0 0  60px rgba(200,110,110,0.30);
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+}
+
+@keyframes textReveal {
+    from { clip-path: inset(0 100% 0 0 round 3px); }
+    to   { clip-path: inset(0 0%   0 0 round 3px); }
+}
+
+/* Gloss shimmer sweeps across after reveal */
+.intro-welcome-text::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        108deg,
+        transparent 0%,
+        transparent 38%,
+        rgba(255,210,210,0.10) 47%,
+        rgba(255,255,255,0.20) 50%,
+        rgba(255,210,210,0.10) 53%,
+        transparent 62%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: glossShimmer 0.75s ease 2.95s both;
+    pointer-events: none;
+}
+
+@keyframes glossShimmer {
+    from { background-position: 200% 0; opacity: 0; }
+    40%  { opacity: 1; }
+    to   { background-position: -40% 0; opacity: 0; }
+}
+
+/* ---- Sub-text ---- */
+.intro-sub-text {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(240, 200, 200, 0.6);
+    margin: 18px 0 0;
+    opacity: 0;
+    animation: introFadeUp 0.7s ease 3.05s both;
+}
+
+@keyframes introFadeUp {
+    from { opacity: 0; transform: translateY(7px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Sparkles ---- */
+.intro-sparkles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.intro-sparkles span {
+    position: absolute;
+    top: 8px;
+    left: var(--spx);
+    font-size: clamp(11px, 1.8vw, 16px);
+    color: #f0c8c8;
+    opacity: 0;
+    animation: spFloat 0.85s ease var(--spd) both;
+}
+
+@keyframes spFloat {
+    0%   { opacity: 0;   transform: translateY(0)    scale(0.5); }
+    40%  { opacity: 1;   transform: translateY(-14px) scale(1.3); }
+    100% { opacity: 0;   transform: translateY(-34px) scale(0.8); }
+}
+
+/* ---- Skip hint ---- */
+.intro-skip {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(240, 200, 200, 0.3);
+    margin: 0;
+    opacity: 0;
+    animation: introFadeUp 0.7s ease 3.5s both;
+    white-space: nowrap;
+}

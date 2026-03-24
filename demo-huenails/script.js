@@ -3,6 +3,34 @@
    Sticky Nav · Hamburger · Animationen · Formulare
    ===================================================== */
 
+/* ============================================================
+   NAGELLACK-INTRO — Auto-dismiss + click-to-skip
+   ============================================================ */
+(function () {
+    var intro = document.getElementById('nail-intro');
+    if (!intro) return;
+
+    // Prevent scrolling while intro is showing
+    document.body.style.overflow = 'hidden';
+
+    function dismiss() {
+        intro.classList.add('intro-exit');
+        setTimeout(function () {
+            intro.remove();
+            document.body.style.overflow = '';
+        }, 880);
+    }
+
+    // Auto-dismiss after 4.2 s (anim finishes at ~3.8 s)
+    var autoTimer = setTimeout(dismiss, 4200);
+
+    // Click / tap anywhere to skip
+    intro.addEventListener('click', function () {
+        clearTimeout(autoTimer);
+        dismiss();
+    }, { once: true });
+}());
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // ============================================================

@@ -9,11 +9,60 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- ==================== NAGELLACK-INTRO ANIMATION ==================== -->
+    <div id="nail-intro" aria-hidden="true">
+        <div class="intro-scene">
+
+            <!-- Nail polish applicator brush (SVG) -->
+            <div class="intro-brush" aria-hidden="true">
+                <svg viewBox="0 0 36 170" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ig1" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#9a2e2e"/>
+                            <stop offset="100%" stop-color="#5c1515"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Cap / bottle top -->
+                    <rect x="3" y="1" width="30" height="22" rx="9" fill="url(#ig1)"/>
+                    <rect x="5" y="3" width="13" height="5" rx="4" fill="rgba(255,255,255,0.22)"/>
+                    <!-- Rod / neck -->
+                    <rect x="14.5" y="23" width="7" height="98" fill="#521414"/>
+                    <rect x="14.5" y="23" width="2.5" height="98" fill="rgba(255,255,255,0.07)"/>
+                    <!-- Ferrule ring -->
+                    <rect x="10" y="119" width="16" height="8" rx="2" fill="#7a2828"/>
+                    <!-- Bristles -->
+                    <path d="M 9 126 C 5 138 7 158 18 169 C 29 158 31 138 27 126 Z" fill="#200808"/>
+                    <path d="M 12 126 C 9 138 11 154 18 167 C 25 154 27 138 24 126 Z" fill="#350e0e" opacity="0.75"/>
+                    <!-- Paint tip -->
+                    <ellipse cx="18" cy="168" rx="5.5" ry="3.5" fill="#c94080"/>
+                    <ellipse cx="16.5" cy="166.5" rx="2" ry="1.5" fill="rgba(255,255,255,0.42)"/>
+                </svg>
+            </div>
+
+            <!-- Text painted by the brush -->
+            <div class="intro-text-container">
+                <p class="intro-welcome-text">Willkommen</p>
+                <p class="intro-sub-text">bei HueNails Nagelstudio &middot; Wattwil</p>
+            </div>
+
+            <!-- Sparkle dots that pop as the brush passes -->
+            <div class="intro-sparkles" aria-hidden="true">
+                <span style="--spx:5%;  --spd:2.4s">✦</span>
+                <span style="--spx:24%; --spd:2.6s">✧</span>
+                <span style="--spx:50%; --spd:2.8s">✦</span>
+                <span style="--spx:76%; --spd:3.0s">✧</span>
+                <span style="--spx:93%; --spd:3.1s">✦</span>
+            </div>
+
+        </div>
+        <p class="intro-skip">Tippen zum Überspringen</p>
+    </div>
 
     <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar" id="navbar">
@@ -273,18 +322,21 @@
             <img src="https://github.com/user-attachments/assets/554bcd20-a5a5-4f91-9d82-ad478f36a1a9"
                  alt="Elegantes Nageldesign mit Kristallen"
                  referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'"
                  loading="lazy">
         </div>
         <div class="gallery-item">
             <img src="https://github.com/user-attachments/assets/6162d03e-3b50-45e5-9181-034ce352a4ff"
                  alt="Nageldesign Ombre mit Strasssteinen"
                  referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'"
                  loading="lazy">
         </div>
         <div class="gallery-item">
             <img src="https://github.com/user-attachments/assets/d4e022ed-a6a8-4aff-b4f3-946bfd8403bd"
                  alt="Professionelle Nagelpflege und Maniküre"
                  referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'"
                  loading="lazy">
         </div>
     </div>
