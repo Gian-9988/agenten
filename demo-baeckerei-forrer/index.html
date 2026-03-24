@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bäckerei-Konditorei-Confiserie Forrer in Ebnat-Kappel — Frisches Brot, feine Torten, handgemachte Toggenburgerli und mehr seit Generationen.">
+    <title>Bäckerei Forrer | Ebnat-Kappel — Frisch aus dem Toggenburg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#home" class="logo">
+            <span class="logo-icon">🥐</span>
+            <div class="logo-text">
+                <span class="logo-name">Bäckerei Forrer</span>
+                <span class="logo-sub">seit Generationen</span>
+            </div>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link active">Startseite</a></li>
+            <li><a href="#ueber-uns" class="nav-link">Über uns</a></li>
+            <li><a href="#sortiment" class="nav-link">Sortiment</a></li>
+            <li><a href="#galerie" class="nav-link">Galerie</a></li>
+            <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Bäckerei-Konditorei<br><em>Forrer</em></h1>
+        <p class="hero-subtitle">Frisches Brot &amp; feine Köstlichkeiten<br>aus dem Herzen von Ebnat-Kappel</p>
+        <div class="hero-cta">
+            <a href="#sortiment" class="btn btn-primary">Unser Sortiment</a>
+            <a href="#kontakt" class="btn btn-outline">Besuchen Sie uns</a>
+        </div>
+        <div class="hero-badge">
+            <span>🌾</span>
+            <p>Handgemacht<br>mit Liebe</p>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Mehr entdecken</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
+</section>
+
+<!-- Highlights -->
+<section class="highlights">
+    <div class="container">
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">🍞</div>
+                <h3>Frisches Brot</h3>
+                <p>Täglich frisch gebacken — vom Ruchbrot bis zum Zopf</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🎂</div>
+                <h3>Feine Torten</h3>
+                <p>Handgemachte Torten für jeden Anlass</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🍫</div>
+                <h3>Toggenburgerli</h3>
+                <p>Unsere berühmte Hausspezialität</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">☕</div>
+                <h3>Café & Genuss</h3>
+                <p>Gemütlich geniessen in unserem Café</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Über uns -->
+<section class="about" id="ueber-uns">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image">
+                <!-- Platzhalter-Bild -->
+                <div class="placeholder-img about-placeholder">
+                    <span class="placeholder-icon">👨‍🍳</span>
+                    <span class="placeholder-text">Bild: Bäckermeister Forrer bei der Arbeit</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Über uns</span>
+                <h2>Tradition trifft Leidenschaft</h2>
+                <p class="about-lead">Seit Generationen steht der Name Forrer für handwerkliche Backkunst im Toggenburg. In unserer Backstube in Ebnat-Kappel vereinen wir traditionelle Rezepte mit frischen, regionalen Zutaten.</p>
+                <p>Jeden Morgen vor Sonnenaufgang beginnt bei uns die Arbeit. Mit viel Liebe und Sorgfalt entstehen unsere Brote, Gipfeli, Torten und natürlich die berühmten Toggenburgerli — unsere süsse Spezialität, die weit über die Region hinaus bekannt ist.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Jahre Tradition</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Produkte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4:00</span>
+                        <span class="stat-label">Start am Morgen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sortiment -->
+<section class="products" id="sortiment">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Sortiment</span>
+            <h2>Unsere Köstlichkeiten</h2>
+            <p>Von frischem Brot über feine Patisserie bis hin zu unseren legendären Toggenburgerli</p>
+        </div>
+
+        <div class="product-categories">
+            <button class="category-btn active" data-category="all">Alle</button>
+            <button class="category-btn" data-category="brot">Brot & Gebäck</button>
+            <button class="category-btn" data-category="patisserie">Patisserie</button>
+            <button class="category-btn" data-category="confiserie">Confiserie</button>
+            <button class="category-btn" data-category="snacks">Snacks & Café</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- Brot -->
+            <div class="product-card" data-category="brot">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🍞</span>
+                    </div>
+                    <span class="product-badge">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <h3>Toggenburger Ruchbrot</h3>
+                    <p>Knuspriges Ruchbrot aus regionalen Mehlen</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="brot">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🥖</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Bauernbrot</h3>
+                    <p>Rustikales Brot nach altem Rezept</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="brot">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🥐</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Buttergipfeli</h3>
+                    <p>Zart und buttrig — perfekt zum Frühstück</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="brot">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🫓</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Sonntagszopf</h3>
+                    <p>Goldgelb geflochten, ein Sonntagsklassiker</p>
+                </div>
+            </div>
+
+            <!-- Patisserie -->
+            <div class="product-card" data-category="patisserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🎂</span>
+                    </div>
+                    <span class="product-badge">Auf Bestellung</span>
+                </div>
+                <div class="product-info">
+                    <h3>Festtagstorte</h3>
+                    <p>Individuell gestaltet für Ihren besonderen Anlass</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="patisserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🧁</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Fruchtschnitten</h3>
+                    <p>Saisonale Früchte auf feinem Mürbeteig</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="patisserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🍰</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Schwarzwälder Torte</h3>
+                    <p>Schokolade, Kirschen und Sahne — ein Klassiker</p>
+                </div>
+            </div>
+
+            <!-- Confiserie -->
+            <div class="product-card" data-category="confiserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder" style="background: linear-gradient(135deg, #8B4513, #D2691E);">
+                        <span class="placeholder-icon">⭐</span>
+                    </div>
+                    <span class="product-badge bestseller">Spezialität</span>
+                </div>
+                <div class="product-info">
+                    <h3>Toggenburgerli</h3>
+                    <p>Unsere berühmte Hausspezialität — das Original!</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="confiserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🍫</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Pralinen</h3>
+                    <p>Handgemachte Schweizer Pralinen</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="confiserie">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🍪</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Guetzli-Mischung</h3>
+                    <p>Unsere feine Auswahl an Festtagsguetzli</p>
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">🥪</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Belegte Brötli</h3>
+                    <p>Frisch belegt — ideal für die Znüni-Pause</p>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <div class="product-img">
+                    <div class="placeholder-img product-placeholder">
+                        <span class="placeholder-icon">☕</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Kaffee & Kuchen</h3>
+                    <p>Geniessen Sie bei uns im Café</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galerie -->
+<section class="gallery" id="galerie">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Galerie</span>
+            <h2>Einblicke in unsere Backstube</h2>
+            <p>Wo Tradition auf Handwerk trifft</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">🏪</span>
+                    <span class="placeholder-text">Unser Laden in Ebnat-Kappel</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">👨‍🍳</span>
+                    <span class="placeholder-text">Bäckermeister bei der Arbeit</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">🍞</span>
+                    <span class="placeholder-text">Frisches Brot aus dem Ofen</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">🎂</span>
+                    <span class="placeholder-text">Unsere feinsten Torten</span>
+                </div>
+            </div>
+            <div class="gallery-item large">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">🌄</span>
+                    <span class="placeholder-text">Blick auf die Churfirsten — unser Zuhause im Toggenburg</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="placeholder-img gallery-placeholder">
+                    <span class="placeholder-icon">🍫</span>
+                    <span class="placeholder-text">Toggenburgerli — das Original</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Kundenstimmen</span>
+            <h2>Was unsere Kunden sagen</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Die besten Toggenburgerli weit und breit! Wir kaufen seit Jahren nur hier ein."</p>
+                <span class="testimonial-author">— Maria K., Ebnat-Kappel</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Ihre Torten sind jedes Mal ein Kunstwerk. Perfekt für unsere Familienfeiern!"</p>
+                <span class="testimonial-author">— Peter S., Wattwil</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Das frische Ruchbrot am Morgen — dafür lohnt sich der Weg nach Ebnat-Kappel."</p>
+                <span class="testimonial-author">— Sandra M., Nesslau</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Kontakt -->
+<section class="contact" id="kontakt">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <span class="section-tag">Kontakt</span>
+                <h2>Besuchen Sie uns</h2>
+                <p class="contact-lead">Wir freuen uns auf Ihren Besuch in unserer Bäckerei in Ebnat-Kappel!</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Adresse</strong>
+                            <p>Hofstrasse 4<br>9642 Ebnat-Kappel</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Telefon</strong>
+                            <p><a href="tel:+41719931930">071 993 19 30</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:beck.forrer@thurweb.ch">beck.forrer@thurweb.ch</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Öffnungszeiten</strong>
+                            <p>
+                                Mo–Fr: 06:00 – 18:30<br>
+                                Sa: 06:00 – 16:00<br>
+                                So: Geschlossen
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Schreiben Sie uns</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="ihre@email.ch">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="079 123 45 67">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Betreff</label>
+                        <select id="subject" name="subject">
+                            <option value="">Bitte wählen...</option>
+                            <option value="bestellung">Bestellung</option>
+                            <option value="torte">Torte auf Bestellung</option>
+                            <option value="catering">Apéro / Catering</option>
+                            <option value="frage">Allgemeine Frage</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Nachricht *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Ihre Nachricht an uns..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Placeholder -->
+    <div class="map-placeholder">
+        <div class="placeholder-img map-img">
+            <span class="placeholder-icon">🗺️</span>
+            <span class="placeholder-text">Google Maps — Hofstrasse 4, 9642 Ebnat-Kappel<br>(Hier würde eine interaktive Karte eingebettet)</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="logo-icon">🥐</span>
+                <h3>Bäckerei Forrer</h3>
+                <p>Frisches Brot und feine Köstlichkeiten aus dem Toggenburg — seit Generationen.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Startseite</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#sortiment">Sortiment</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Öffnungszeiten</h4>
+                <ul>
+                    <li>Mo–Fr: 06:00 – 18:30</li>
+                    <li>Sa: 06:00 – 16:00</li>
+                    <li>So: Geschlossen</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Folgen Sie uns</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link" title="Facebook">📘</a>
+                    <a href="#" class="social-link" title="Instagram">📸</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bäckerei-Konditorei-Confiserie Forrer. Alle Rechte vorbehalten.</p>
+            <p class="demo-notice">⚡ Dies ist eine Demo-Website — erstellt als Vorschlag für einen modernen Webauftritt.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
