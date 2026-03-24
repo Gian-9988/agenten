@@ -371,15 +371,6 @@ img { max-width: 100%; display: block; }
     to   { clip-path: inset(0 0%   0 0 round 6px); opacity: 0.8; }
 }
 
-.hero-opening {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    font-style: italic;
-    color: var(--rose-gold-light);
-    margin-bottom: 18px;
-    letter-spacing: 0.02em;
-}
-
 .hero-text {
     font-size: 1.05rem;
     color: rgba(255, 255, 255, 0.85);
@@ -937,9 +928,8 @@ img { max-width: 100%; display: block; }
 
 .hero-badge   { animation: heroFadeUp 0.7s ease 0.15s both; }
 .hero-title   { animation: heroFadeUp 0.7s ease 0.35s both; }
-.hero-opening { animation: heroFadeUp 0.7s ease 0.55s both; }
-.hero-text    { animation: heroFadeUp 0.7s ease 0.72s both; }
-.hero-cta     { animation: heroFadeUp 0.7s ease 0.9s  both; }
+.hero-text    { animation: heroFadeUp 0.7s ease 0.55s both; }
+.hero-cta     { animation: heroFadeUp 0.7s ease 0.72s both; }
 
 /* Stagger price cards */
 .price-card:nth-child(1).visible { transition-delay: 0s; }
