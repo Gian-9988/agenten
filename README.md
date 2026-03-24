@@ -24,8 +24,21 @@ Professionelle Demo-Website für die **Bäckerei-Konditorei-Confiserie Forrer** 
 - Scroll-Animationen
 - Kundenstimmen
 
-### So öffnest du die Demo
-Einfach die Datei `demo-baeckerei-forrer/index.html` im Browser öffnen!
+### [demo-coiffeur-alberto/](./demo-coiffeur-alberto/)
+Professionelle Demo-Website für **Studio Alberto — Coiffeur & Kosmetik** (Ebnat-Kappel):
+- Elegantes One-Page Design mit Premium-Ausstrahlung
+- **Online-Reservierungssystem** (Service, Datum & Uhrzeit wählen)
+- 6 Services mit Preisen (Damen, Herren, Coloration, Kosmetik, Maniküre, Braut)
+- Animierter Hero mit Floating-Shapes & Partikel-Effekten
+- Laufband-Animation (Marquee) mit allen Services
+- Galerie mit Overlay-Effekten
+- Kundenstimmen-Slider
+- Kontaktformular & Öffnungszeiten
+- Scroll-Animationen (Fade-in, Scale-in, Stagger-Delays)
+- Voll responsiv (Mobile, Tablet, Desktop)
+
+### So öffnest du die Demos
+Einfach die Datei `demo-baeckerei-forrer/index.html` oder `demo-coiffeur-alberto/index.html` im Browser öffnen!
 
 ## 💰 Top-Kunden zum Anschreiben
 
