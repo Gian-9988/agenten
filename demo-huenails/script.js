@@ -133,14 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateElements.forEach(el => animObserver.observe(el));
 
-    // Hero-Elemente sofort sichtbar machen (sind beim Load schon im Viewport)
-    document.querySelectorAll('.hero-content .fade-up').forEach(el => {
-        // small rAF delay so CSS transition still fires
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => el.classList.add('visible'));
-        });
-    });
-
     // ============================================================
     // TERMIN BUCHEN — Minimum-Datum auf heute setzen
     // ============================================================
