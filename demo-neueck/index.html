@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neueck — Beste Döner &amp; Dürüm in Wattwil</title>
+    <meta name="description" content="Neueck Imbiss in Wattwil – Döner, Dürüm, Tacos und mehr. Frisch, saftig, legendär. Bewertung 4.9/5 Sterne.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     DÜRÜM INTRO ANIMATION
+     ============================================================ -->
+<div id="durum-intro" class="durum-intro">
+    <div class="durum-intro-inner">
+        <div class="durum-intro-spin">
+            <!-- CSS-drawn Dürüm wrap -->
+            <div class="durum-icon durum-icon--large">
+                <div class="durum-wrap">
+                    <div class="durum-tortilla"></div>
+                    <div class="durum-filling">
+                        <div class="filling-layer filling-meat"></div>
+                        <div class="filling-layer filling-salad"></div>
+                        <div class="filling-layer filling-sauce"></div>
+                        <div class="filling-layer filling-onion"></div>
+                    </div>
+                    <div class="durum-fold-left"></div>
+                    <div class="durum-fold-right"></div>
+                </div>
+            </div>
+        </div>
+        <p class="durum-intro-text">Neueck</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+            <span class="brand-icon">🌯</span>
+            <span class="brand-text">Neueck</span>
+        </a>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">Über uns</a></li>
+            <li><a href="#menu" class="nav-link">Speisekarte</a></li>
+            <li><a href="#reviews" class="nav-link">Bewertungen</a></li>
+            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            <li class="nav-cta-wrapper">
+                <a href="tel:+41794451644" class="nav-cta">📞 Jetzt anrufen</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION — mit drehendem Dürüm
+     ============================================================ -->
+<section id="hero" class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+        <div class="hero-text fade-in-left">
+            <div class="hero-badge">
+                <span class="badge-stars">★★★★★</span>
+                <span class="badge-rating">4.9 / 5</span>
+                <span class="badge-count">148 Bewertungen</span>
+            </div>
+            <h1 class="hero-title">
+                Der <span class="text-gradient">beste Döner</span>
+                in der Region
+            </h1>
+            <p class="hero-subtitle">
+                Frisches Fleisch, knuspriges Brot, knackiger Salat — alles handgemacht
+                mit Liebe in Wattwil. Komm vorbei und überzeug dich selbst!
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary btn-lg">
+                    <span>🍽️</span> Speisekarte
+                </a>
+                <a href="tel:+41794451644" class="btn btn-outline btn-lg">
+                    <span>📞</span> Bestellen
+                </a>
+            </div>
+            <div class="hero-services">
+                <div class="service-tag">🍴 Speisen vor Ort</div>
+                <div class="service-tag">🥡 Zum Mitnehmen</div>
+                <div class="service-tag">🚗 Lieferdienst</div>
+            </div>
+        </div>
+
+        <div class="hero-visual fade-in-right">
+            <div class="durum-hero-wrapper">
+                <!-- Spinning Dürüm on hero -->
+                <div class="durum-spin-container">
+                    <div class="durum-glow"></div>
+                    <div class="durum-icon durum-icon--hero">
+                        <div class="durum-wrap">
+                            <div class="durum-tortilla"></div>
+                            <div class="durum-filling">
+                                <div class="filling-layer filling-meat"></div>
+                                <div class="filling-layer filling-salad"></div>
+                                <div class="filling-layer filling-sauce"></div>
+                                <div class="filling-layer filling-onion"></div>
+                            </div>
+                            <div class="durum-fold-left"></div>
+                            <div class="durum-fold-right"></div>
+                        </div>
+                    </div>
+                    <div class="orbit-items">
+                        <div class="orbit-item orbit-item-1">🌶️</div>
+                        <div class="orbit-item orbit-item-2">🥬</div>
+                        <div class="orbit-item orbit-item-3">🧅</div>
+                        <div class="orbit-item orbit-item-4">🍅</div>
+                        <div class="orbit-item orbit-item-5">🫓</div>
+                    </div>
+                </div>
+                <div class="hero-price-badge">
+                    <span class="price-label">Ab</span>
+                    <span class="price-value">CHF 10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ÜBER UNS
+     ============================================================ -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Über uns</span>
+            <h2 class="section-title">Willkommen bei <span class="text-gradient">Neueck</span></h2>
+            <p class="section-subtitle">
+                Seit Jahren die erste Adresse für Döner-Liebhaber im Toggenburg.
+                Bei uns bekommst du nur das Beste — frisch zubereitet, mit Leidenschaft serviert.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card fade-in-left">
+                <div class="about-card-icon">🔥</div>
+                <h3>Frisch vom Grill</h3>
+                <p>Unser Fleisch wird täglich frisch mariniert und am Drehspiess perfekt gegrillt. Kein Aufwärmen, kein Kompromiss.</p>
+            </div>
+            <div class="about-card fade-up">
+                <div class="about-card-icon">🌿</div>
+                <h3>Frische Zutaten</h3>
+                <p>Knackiger Salat, frische Tomaten, hausgemachte Saucen — bei uns schmeckst du den Unterschied in jedem Bissen.</p>
+            </div>
+            <div class="about-card fade-in-right">
+                <div class="about-card-icon">❤️</div>
+                <h3>Mit Liebe gemacht</h3>
+                <p>Freundliches Personal, faire Preise und ein Lächeln gibt's gratis dazu. Deine Wünsche werden bei uns beachtet.</p>
+            </div>
+        </div>
+
+        <div class="about-stats fade-up">
+            <div class="stat">
+                <span class="stat-number" data-target="148">0</span>
+                <span class="stat-label">Bewertungen</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="4.9" data-decimal="true">0</span>
+                <span class="stat-label">Sterne ★</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="10" data-prefix="CHF ">0</span>
+                <span class="stat-label">Ab Preis</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                <span class="stat-label">Frisch</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SPEISEKARTE
+     ============================================================ -->
+<section id="menu" class="section menu">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Speisekarte</span>
+            <h2 class="section-title">Unsere <span class="text-gradient">Highlights</span></h2>
+            <p class="section-subtitle">
+                Von klassisch bis kreativ — entdecke unsere beliebtesten Gerichte.
+            </p>
+        </div>
+
+        <div class="menu-filter fade-up">
+            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn" data-filter="doener">Döner</button>
+            <button class="filter-btn" data-filter="durum">Dürüm</button>
+            <button class="filter-btn" data-filter="extras">Extras</button>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card fade-up" data-category="doener">
+                <div class="menu-card-emoji">🥙</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Döner Kebab</h3>
+                        <span class="menu-price">CHF 10.–</span>
+                    </div>
+                    <p>Der Klassiker — frisches Dönerfleisch im knusprigen Fladenbrot mit Salat und Sauce nach Wahl.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag popular">⭐ Beliebt</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card fade-up" data-category="durum">
+                <div class="menu-card-emoji">🌯</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Dürüm</h3>
+                        <span class="menu-price">CHF 12.–</span>
+                    </div>
+                    <p>Unser Star — saftiges Fleisch im dünnen Fladenbrot gerollt. Perfekt für unterwegs oder zum Geniessen.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag popular">⭐ Bestseller</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card fade-up" data-category="extras">
+                <div class="menu-card-emoji">🌮</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Tacos</h3>
+                        <span class="menu-price">CHF 11.–</span>
+                    </div>
+                    <p>Knusprige Tacos mit würzigem Fleisch, frischem Gemüse und unserer Spezialsauce.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag new">🆕 Neu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card fade-up" data-category="doener">
+                <div class="menu-card-emoji">🍖</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Döner Teller</h3>
+                        <span class="menu-price">CHF 15.–</span>
+                    </div>
+                    <p>Dönerfleisch mit Reis oder Pommes, Salat und Sauce — für den grossen Hunger.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag">🍚 Mit Beilage</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card fade-up" data-category="extras">
+                <div class="menu-card-emoji">🍟</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Pommes Frites</h3>
+                        <span class="menu-price">CHF 6.–</span>
+                    </div>
+                    <p>Knusprig goldene Pommes — der perfekte Snack oder Beilage zu deinem Döner.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag">🥔 Beilage</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card fade-up" data-category="extras">
+                <div class="menu-card-emoji">🥤</div>
+                <div class="menu-card-content">
+                    <div class="menu-card-header">
+                        <h3>Getränke</h3>
+                        <span class="menu-price">ab CHF 3.–</span>
+                    </div>
+                    <p>Erfrischende Getränke — Ayran, Cola, Fanta, Eistee und vieles mehr.</p>
+                    <div class="menu-tags">
+                        <span class="menu-tag">🧊 Kalt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-cta fade-up">
+            <p>Hungrig? Ruf uns an und bestell dein Lieblingsessen!</p>
+            <a href="tel:+41794451644" class="btn btn-primary btn-lg">
+                <span>📞</span> 079 445 16 44
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BEWERTUNGEN
+     ============================================================ -->
+<section id="reviews" class="section reviews">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Bewertungen</span>
+            <h2 class="section-title">Was unsere <span class="text-gradient">Kunden</span> sagen</h2>
+            <p class="section-subtitle">
+                4.9 von 5 Sternen — 148 zufriedene Kunden können nicht irren!
+            </p>
+        </div>
+
+        <div class="reviews-overview fade-up">
+            <div class="reviews-score">
+                <span class="score-number">4.9</span>
+                <div class="score-stars">★★★★★</div>
+                <span class="score-count">148 Bewertungen</span>
+            </div>
+            <div class="reviews-bars">
+                <div class="bar-row">
+                    <span class="bar-label">5 ★</span>
+                    <div class="bar-track"><div class="bar-fill" style="width: 94%"></div></div>
+                    <span class="bar-count">139</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">4 ★</span>
+                    <div class="bar-track"><div class="bar-fill" style="width: 5%"></div></div>
+                    <span class="bar-count">7</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">3 ★</span>
+                    <div class="bar-track"><div class="bar-fill" style="width: 1%"></div></div>
+                    <span class="bar-count">2</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">2 ★</span>
+                    <div class="bar-track"><div class="bar-fill" style="width: 0%"></div></div>
+                    <span class="bar-count">0</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">1 ★</span>
+                    <div class="bar-track"><div class="bar-fill" style="width: 0%"></div></div>
+                    <span class="bar-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card fade-in-left">
+                <div class="review-header">
+                    <div class="review-avatar">S</div>
+                    <div class="review-meta">
+                        <span class="review-name">sotrue</span>
+                        <span class="review-badge">Local Guide · 265 Rezensionen</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    «Für uns die beste Dönerbude in der Region. Sehr freundliches Personal.
+                    Wünsche werden beachtet. Sehr zufrieden.»
+                </p>
+                <span class="review-date">vor 9 Monaten</span>
+            </div>
+
+            <div class="review-card fade-up">
+                <div class="review-header">
+                    <div class="review-avatar">Y</div>
+                    <div class="review-meta">
+                        <span class="review-name">Yones Hussein</span>
+                        <span class="review-badge">3 Rezensionen</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    «Beste Döner i ganz Wattwil — Fleisch, Brot, eifoch nur frisch und saftig.
+                    Und Salat isch au Bombe! Service top.»
+                </p>
+                <span class="review-date">vor einem Monat</span>
+            </div>
+
+            <div class="review-card fade-in-right">
+                <div class="review-header">
+                    <div class="review-avatar">S</div>
+                    <div class="review-meta">
+                        <span class="review-name">Sabrina Langenegger</span>
+                        <span class="review-badge">Local Guide · 25 Rezensionen</span>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    «Kenne nicht alle Kebab Restaurants im Toggenburg, aber ich kann mir schwer
+                    vorstellen, dass dieses jemand topt 👍🏼»
+                </p>
+                <span class="review-date">vor 5 Monaten</span>
+            </div>
+        </div>
+
+        <div class="reviews-tags fade-up">
+            <span class="review-tag">döner <small>21</small></span>
+            <span class="review-tag">dürüm <small>5</small></span>
+            <span class="review-tag">tacos <small>2</small></span>
+            <span class="review-tag">terrasse <small>2</small></span>
+            <span class="review-tag">sommer <small>2</small></span>
+            <span class="review-tag">parkplatz <small>2</small></span>
+            <span class="review-tag">preis <small>2</small></span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     KONTAKT & STANDORT
+     ============================================================ -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Kontakt</span>
+            <h2 class="section-title">Besuch uns in <span class="text-gradient">Wattwil</span></h2>
+            <p class="section-subtitle">
+                Wir freuen uns auf deinen Besuch! Komm vorbei oder ruf an.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info fade-in-left">
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h4>Adresse</h4>
+                        <p>Ebnaterstrasse 96<br>9630 Wattwil</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕐</div>
+                    <div>
+                        <h4>Öffnungszeiten</h4>
+                        <p>Mo – So: 11:00 – 22:00<br>
+                        <span class="status-badge" id="openStatus">Wird geprüft …</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p><a href="tel:+41794451644">079 445 16 44</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">💰</div>
+                    <div>
+                        <h4>Preisklasse</h4>
+                        <p>CHF 10 – 20 pro Person</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🌐</div>
+                    <div>
+                        <h4>Social Media</h4>
+                        <p><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-actions">
+                    <a href="tel:+41794451644" class="btn btn-primary">
+                        <span>📞</span> Anrufen
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Ebnaterstrasse+96+9630+Wattwil" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <span>🗺️</span> Route planen
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-map fade-in-right">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714.5!2d9.0861!3d47.2991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1d9e8f8c8a5f%3A0x1!2sEbnaterstrasse+96%2C+9630+Wattwil!5e0!3m2!1sde!2sch!4v1"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Standort Neueck Wattwil">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-icon">🌯</span>
+                <span class="brand-text">Neueck</span>
+                <p class="footer-tagline">Der beste Döner &amp; Dürüm in Wattwil</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">Über uns</a>
+                <a href="#menu">Speisekarte</a>
+                <a href="#reviews">Bewertungen</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+            <div class="footer-contact">
+                <p>📍 Ebnaterstrasse 96, 9630 Wattwil</p>
+                <p>📞 <a href="tel:+41794451644">079 445 16 44</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Neueck Wattwil. Alle Rechte vorbehalten.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
