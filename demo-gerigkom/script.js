@@ -123,7 +123,7 @@ function initRevealAnimations() {
     if (!reveals.length) return;
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 // Staggered delay for sibling cards
                 const parent = entry.target.parentElement;
