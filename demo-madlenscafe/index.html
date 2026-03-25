@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlen's Cafe — Wattwil</title>
+    <meta name="description" content="Madlen's Cafe AG in Wattwil – sich gut fühlen, genießen, verwöhnen. Frische regionale Küche, feine Patisserie und herzliche Gastfreundschaft.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     KAFFEETASSE INTRO ANIMATION
+     ============================================================ -->
+<div id="cafe-intro" aria-hidden="true">
+    <div class="intro-scene">
+        <!-- CSS coffee cup -->
+        <div class="intro-cup-wrapper">
+            <div class="intro-steam">
+                <span class="steam s1"></span>
+                <span class="steam s2"></span>
+                <span class="steam s3"></span>
+            </div>
+            <div class="intro-cup">
+                <div class="cup-body">
+                    <div class="cup-coffee"></div>
+                    <div class="cup-shine"></div>
+                </div>
+                <div class="cup-handle"></div>
+                <div class="cup-saucer"></div>
+            </div>
+        </div>
+        <div class="intro-text-container">
+            <p class="intro-welcome">Willkommen</p>
+            <p class="intro-sub">bei Madlen's Cafe &middot; Wattwil</p>
+        </div>
+        <!-- Floating beans -->
+        <div class="intro-beans" aria-hidden="true">
+            <span class="bean b1">☕</span>
+            <span class="bean b2">✦</span>
+            <span class="bean b3">☕</span>
+            <span class="bean b4">✦</span>
+            <span class="bean b5">☕</span>
+        </div>
+    </div>
+    <p class="intro-skip">Tippen zum Überspringen</p>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+            <span class="brand-icon">☕</span>
+            <div class="brand-text-wrap">
+                <span class="brand-text">Madlen's Cafe</span>
+                <span class="brand-sub">Wattwil</span>
+            </div>
+        </a>
+
+        <button id="navToggle" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">Über uns</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#angebot" class="nav-link">Angebot</a></li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#galerie" class="nav-link">Galerie</a></li>
+            <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+            <li class="nav-cta-wrapper">
+                <a href="tel:+41715658080" class="nav-cta">📞 071 565 80 80</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero" class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+        <div class="hero-text fade-in-left">
+            <div class="hero-badge">
+                <span id="openStatus" class="status-badge"></span>
+            </div>
+            <h1 class="hero-title">
+                Bei uns finden Sie für jede
+                <span class="text-gradient">&ldquo;Lust&rdquo;</span> etwas
+            </h1>
+            <p class="hero-subtitle">
+                sich gut fühlen &middot; genießen &middot; verwöhnen
+            </p>
+            <p class="hero-desc">
+                Frische regionale Produkte, feine Patisserie und herzliche Gastfreundschaft —
+                mitten in Wattwil, direkt an der Bahnhofstrasse.
+            </p>
+            <div class="hero-actions">
+                <a href="#angebot" class="btn btn-primary btn-lg">
+                    <span>🍰</span> Unser Angebot
+                </a>
+                <a href="tel:+41715658080" class="btn btn-outline btn-lg">
+                    <span>📞</span> Reservieren
+                </a>
+            </div>
+            <div class="hero-services">
+                <div class="service-tag">🥐 Frühstück</div>
+                <div class="service-tag">🍽️ Mittagsmenü</div>
+                <div class="service-tag">🍰 Patisserie</div>
+                <div class="service-tag">🍦 Glace</div>
+            </div>
+        </div>
+
+        <div class="hero-visual fade-in-right">
+            <div class="hero-cup-scene">
+                <div class="hero-steam">
+                    <span class="hsteam hs1"></span>
+                    <span class="hsteam hs2"></span>
+                    <span class="hsteam hs3"></span>
+                </div>
+                <div class="hero-cup-big">
+                    <div class="hcup-body">
+                        <div class="hcup-art">
+                            <div class="latte-art">
+                                <div class="la-leaf la-l"></div>
+                                <div class="la-leaf la-r"></div>
+                                <div class="la-stem"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hcup-handle"></div>
+                    <div class="hcup-saucer"></div>
+                </div>
+                <div class="orbit-items">
+                    <div class="orbit-item oi1">🥐</div>
+                    <div class="orbit-item oi2">🍰</div>
+                    <div class="orbit-item oi3">🧁</div>
+                    <div class="orbit-item oi4">🍪</div>
+                    <div class="orbit-item oi5">🫖</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ÜBER UNS
+     ============================================================ -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Über uns</span>
+            <h2 class="section-title">Die Geschichte von <span class="text-gradient">Madlen's Cafe</span></h2>
+        </div>
+
+        <div class="about-story">
+            <div class="story-block fade-in-left">
+                <div class="story-year">Kindheit</div>
+                <p>
+                    Madlen wuchs in Deutschland in einer Gastro-Familie auf. Deshalb liegt ein Job in der
+                    Gastronomie schon in der Wiege. Ihre Ausbildung zur Restaurantfachfrau absolvierte sie
+                    mit Bravour. Doch Madlen wollte mehr und besuchte deshalb die Hotelfachschule, die sie
+                    erfolgreich abschloss. Schon als Kind war Madlens Traum, irgendwann ein eigenes Café
+                    zu besitzen und zu führen.
+                </p>
+            </div>
+            <div class="story-block fade-in-right">
+                <div class="story-year">2004</div>
+                <p>
+                    Madlen kam für eine dreimonatige Saison in die Schweiz. Aus drei Monaten wurde es
+                    immer mehr. Inzwischen hat Madlen Deutschland den Rücken gekehrt und lebt seitdem
+                    in der Schweiz.
+                </p>
+            </div>
+            <div class="story-block fade-in-left">
+                <div class="story-year">2011</div>
+                <p>
+                    Madlen lernte Daniel kennen. Madlen und Daniel heirateten und 2016 erblickte Angelina
+                    das Licht der Welt und machte das Familienglück perfekt.
+                </p>
+            </div>
+            <div class="story-block fade-in-right">
+                <div class="story-year">2019</div>
+                <p>
+                    Der Traum wird wahr! Madlen eröffnet ihr eigenes Café — Madlen's Cafe in Wattwil.
+                    Mit Herzblut, regionalen Produkten und einem Lächeln für jeden Gast.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-values fade-up">
+            <div class="value-card">
+                <div class="value-icon">🌿</div>
+                <h3>Regional &amp; Frisch</h3>
+                <p>Alle Produkte werden regional bezogen und täglich frisch zubereitet.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">❤️</div>
+                <h3>Mit Liebe gemacht</h3>
+                <p>Herzliche Gastfreundschaft und ein Lächeln für jeden Gast.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">👨‍🍳</div>
+                <h3>Gutbürgerliche Küche</h3>
+                <p>Eine Mischung aus traditioneller, gutbürgerlicher und moderner Küche.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     TEAM
+     ============================================================ -->
+<section id="team" class="section team-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Unser Team</span>
+            <h2 class="section-title">Die <span class="text-gradient">Menschen</span> hinter dem Cafe</h2>
+            <p class="section-subtitle">
+                Ein eingespieltes Team, das Sie mit Freude und Herzlichkeit bedient.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">DK</div>
+                </div>
+                <h3 class="team-name">Daniel Kamber</h3>
+                <p class="team-role">Firmeninhaber</p>
+            </div>
+            <div class="team-card team-card--featured fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">MK</div>
+                </div>
+                <h3 class="team-name">Madlen Kamber</h3>
+                <p class="team-role">Geschäftsführerin</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">SS</div>
+                </div>
+                <h3 class="team-name">Stefan Schmidt</h3>
+                <p class="team-role">Geschäftsführer Stv.</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">KS</div>
+                </div>
+                <h3 class="team-name">Kathy Schmidt</h3>
+                <p class="team-role">Service</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">DR</div>
+                </div>
+                <h3 class="team-name">Daniela Reginato</h3>
+                <p class="team-role">Service</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">KA</div>
+                </div>
+                <h3 class="team-name">Klara Artho</h3>
+                <p class="team-role">Service</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">MC</div>
+                </div>
+                <h3 class="team-name">Michael Czine</h3>
+                <p class="team-role">Küchenchef</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">K</div>
+                </div>
+                <h3 class="team-name">Kung</h3>
+                <p class="team-role">Küche</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">RB</div>
+                </div>
+                <h3 class="team-name">Ramon Berger</h3>
+                <p class="team-role">Küche</p>
+            </div>
+            <div class="team-card fade-up">
+                <div class="team-avatar">
+                    <div class="avatar-placeholder">ZT</div>
+                </div>
+                <h3 class="team-name">Zoja Tushi</h3>
+                <p class="team-role">Raumpflegerin</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     ANGEBOT
+     ============================================================ -->
+<section id="angebot" class="section angebot-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Angebot</span>
+            <h2 class="section-title">Was wir <span class="text-gradient">bieten</span></h2>
+            <p class="section-subtitle">
+                Alle unsere Produkte werden regional bezogen und täglich frisch zubereitet.
+            </p>
+        </div>
+
+        <div class="angebot-grid">
+            <div class="angebot-card fade-in-left">
+                <div class="angebot-icon">🥐</div>
+                <h3>à la Carte Zmorge</h3>
+                <p>Starten Sie Ihren Tag mit einem reichhaltigen Frühstück nach Ihren Wünschen.</p>
+            </div>
+            <div class="angebot-card fade-up">
+                <div class="angebot-icon">🥪</div>
+                <h3>Frische Sandwichs</h3>
+                <p>Täglich frisch zubereitete Sandwichs — perfekt für den kleinen Hunger zwischendurch.</p>
+            </div>
+            <div class="angebot-card fade-in-right">
+                <div class="angebot-icon">🍽️</div>
+                <h3>Wechselnde Gerichte</h3>
+                <p>Wöchentlich wechselnde Gerichte — saisonal, frisch und regional.</p>
+            </div>
+            <div class="angebot-card fade-in-left">
+                <div class="angebot-icon">👨‍🍳</div>
+                <h3>Traditionelle Küche</h3>
+                <p>Eine Mischung aus traditioneller, gutbürgerlicher und moderner Küche.</p>
+            </div>
+            <div class="angebot-card fade-up">
+                <div class="angebot-icon">🍰</div>
+                <h3>Feine Patisserie</h3>
+                <p>Grosse Auswahl von feiner Patisserie und Glace (Mövenpick).</p>
+            </div>
+            <div class="angebot-card fade-in-right">
+                <div class="angebot-icon">🎉</div>
+                <h3>Bankett-Angebote</h3>
+                <p>Auf Reservationen auch abends möglich — für Ihren besonderen Anlass.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     WOCHENKARTE / MENU
+     ============================================================ -->
+<section id="menu" class="section menu-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Menu</span>
+            <h2 class="section-title"><span class="text-gradient">Wochen-Menukarte</span></h2>
+            <p class="section-subtitle">23.03 – 27.03.2026</p>
+        </div>
+
+        <div class="menu-notice fade-up">
+            <div class="menu-notice-icon">📞</div>
+            <p>
+                <strong>Reservieren Sie Ihren Platz!</strong><br>
+                Am besten telefonisch unter
+                <a href="tel:+41715658080">071 565 80 80</a>
+            </p>
+        </div>
+
+        <div class="menu-cta fade-up">
+            <p>Die aktuelle Wochenkarte finden Sie in unserem Lokal oder rufen Sie uns an.</p>
+            <a href="tel:+41715658080" class="btn btn-primary">
+                <span>📞</span> Jetzt anrufen
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     GALERIE
+     ============================================================ -->
+<section id="galerie" class="section galerie-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Galerie</span>
+            <h2 class="section-title">Einblicke in unser <span class="text-gradient">Cafe</span></h2>
+            <p class="section-subtitle">Bilder sagen mehr als tausend Worte.</p>
+        </div>
+
+        <div class="gallery-grid fade-up">
+            <div class="gallery-item gi-wide">
+                <div class="gallery-placeholder">
+                    <span>🍰</span>
+                    <p>Feine Patisserie</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <span>☕</span>
+                    <p>Kaffee-Spezialitäten</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <span>🥐</span>
+                    <p>Frühstück</p>
+                </div>
+            </div>
+            <div class="gallery-item gi-tall">
+                <div class="gallery-placeholder">
+                    <span>🏠</span>
+                    <p>Unser Lokal</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <span>🍽️</span>
+                    <p>Mittagsmenü</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <span>🍦</span>
+                    <p>Mövenpick Glace</p>
+                </div>
+            </div>
+            <div class="gallery-item gi-wide">
+                <div class="gallery-placeholder">
+                    <span>👨‍👩‍👧</span>
+                    <p>Unser Team</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <span>🥪</span>
+                    <p>Sandwichs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     KONTAKT & ANREISE
+     ============================================================ -->
+<section id="kontakt" class="section kontakt-section">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Kontakt &amp; Anreise</span>
+            <h2 class="section-title">Besuchen Sie <span class="text-gradient">uns</span></h2>
+        </div>
+
+        <div class="kontakt-grid">
+            <!-- Contact info -->
+            <div class="kontakt-info fade-in-left">
+                <div class="kontakt-card">
+                    <h3>📍 Adresse</h3>
+                    <p>
+                        Madlen's Cafe AG<br>
+                        Bahnhofstrasse 7<br>
+                        9630 Wattwil
+                    </p>
+                </div>
+                <div class="kontakt-card">
+                    <h3>📞 Kontakt</h3>
+                    <p>
+                        Telefon: <a href="tel:+41715658080">071 565 80 80</a><br>
+                        E-Mail: <a href="mailto:info@madlenscafe.ch">info@madlenscafe.ch</a><br>
+                        Web: <a href="https://www.madlenscafe.ch" target="_blank" rel="noopener noreferrer">www.madlenscafe.ch</a>
+                    </p>
+                </div>
+                <div class="kontakt-card">
+                    <h3>📱 Social Media</h3>
+                    <p>
+                        Folgen Sie uns auf
+                        <a href="https://www.facebook.com/madlenscafe/?ref=bookmarks" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    </p>
+                </div>
+                <div class="kontakt-card">
+                    <h3>🚗 Anreise</h3>
+                    <p>
+                        <strong>Von Wil kommend:</strong> Umfahrung Ausfahrt Wattwil nehmen,
+                        Richtung Dorfzentrum/Ricken, vis à vis vom Manor sehen Sie das Madlen's Cafe.
+                    </p>
+                    <p>
+                        <strong>Vom Ricken kommend:</strong> Richtung Dorfzentrum, Kreisel zweite Ausfahrt,
+                        vis à vis vom Manor sehen Sie das Madlen's Cafe.
+                    </p>
+                    <p>
+                        <strong>Parkplätze</strong> sind vorhanden oder nehmen Sie die Tiefgarage des
+                        Bahnhofs/Migros/SOB.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Opening hours -->
+            <div class="kontakt-hours fade-in-right">
+                <div class="hours-card">
+                    <h3>🕐 Öffnungszeiten</h3>
+                    <div class="hours-table">
+                        <div class="hours-row">
+                            <span class="hours-day">Montag – Freitag</span>
+                            <span class="hours-time">08:00 – 18:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Samstag</span>
+                            <span class="hours-time">08:00 – 17:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span class="hours-day">Sonntag</span>
+                            <span class="hours-time">09:00 – 17:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map placeholder -->
+                <div class="map-placeholder">
+                    <div class="map-inner">
+                        <span>📍</span>
+                        <p>Bahnhofstrasse 7, 9630 Wattwil</p>
+                        <a href="https://maps.google.com/?q=Bahnhofstrasse+7,+9630+Wattwil" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                            In Google Maps öffnen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="footer-logo">☕ Madlen's Cafe</span>
+                <p class="footer-tagline">sich gut fühlen &middot; genießen &middot; verwöhnen</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Über uns</a>
+                <a href="#team">Team</a>
+                <a href="#angebot">Angebot</a>
+                <a href="#menu">Menu</a>
+                <a href="#galerie">Galerie</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Madlens Cafe AG &middot; Bahnhofstrasse 7 &middot; 9630 Wattwil &middot; 071 565 80 80</p>
+            <p class="footer-copy">&copy; 2026 Madlen's Cafe AG — Alle Rechte vorbehalten.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
