@@ -395,7 +395,7 @@ img {
     transform: translateY(-2px);
 }
 
-/* Hero Visual / Spinning Dürüm */
+/* Hero Visual / 3D Döner-Spiess (Drehspiess) */
 .hero-visual {
     position: relative;
     display: flex;
@@ -404,116 +404,175 @@ img {
     height: 500px;
 }
 
-.doner-spinner {
-    position: relative;
+/* === Scene container with perspective === */
+.spiess-scene {
+    perspective: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: spiessFloat 4s ease-in-out infinite;
 }
 
-.doner-3d {
-    width: 280px;
-    height: 280px;
-    perspective: 800px;
-    animation: floatUpDown 4s ease-in-out infinite;
-}
-
-.doner-wrap {
-    width: 100%;
-    height: 100%;
+.spiess-rotate {
     position: relative;
+    width: 160px;
+    height: 380px;
     transform-style: preserve-3d;
-    animation: spinDoner 8s linear infinite;
+    animation: spiessSpin 6s linear infinite;
 }
 
-.doner-body {
+/* --- Metal skewer pole --- */
+.spiess-pole {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    background: linear-gradient(135deg, #c4873b 0%, #8B6914 25%, #D4A843 50%, #a07030 75%, #c4873b 100%);
-    box-shadow:
-        inset 0 -20px 40px rgba(0,0,0,0.4),
-        inset 0 10px 20px rgba(255,255,255,0.15),
-        0 20px 60px rgba(0,0,0,0.5),
-        0 0 80px rgba(255, 215, 0, 0.15);
+    left: 50%;
+    top: -18px;
+    width: 8px;
+    height: calc(100% + 36px);
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #999 0%, #eee 40%, #ccc 60%, #888 100%);
+    border-radius: 4px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.4);
+    z-index: 10;
 }
 
-.doner-filling {
+/* --- Top cap (metal disc) --- */
+.spiess-cap {
     position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 60px;
+    height: 14px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #ddd 0%, #999 100%);
     border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 11;
 }
 
-.filling-1 {
-    top: 25%;
-    left: 30%;
-    width: 18px;
-    height: 18px;
-    background: radial-gradient(circle, #ff6347 60%, #cc4433);
-    box-shadow: 0 2px 8px rgba(255,99,71,0.4);
+/* --- Meat body — tall tapered cylinder --- */
+.spiess-meat {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 130px;
+    height: 320px;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 45% 45% / 8% 8% 12% 12%;
+    background:
+        repeating-linear-gradient(
+            180deg,
+            #8B4513 0px, #7a3b10 6px,
+            #A0522D 6px, #914820 14px,
+            #6B3410 14px, #5a2a0d 18px,
+            #CD853F 18px, #b87333 24px,
+            #8B4513 24px, #7a3b10 30px
+        );
+    box-shadow:
+        inset -30px 0 40px rgba(0,0,0,0.5),
+        inset 20px 0 30px rgba(255,200,100,0.15),
+        inset 0 -15px 25px rgba(0,0,0,0.4),
+        6px 0 20px rgba(0,0,0,0.4),
+        -3px 0 15px rgba(0,0,0,0.2),
+        0 0 60px rgba(255, 165, 0, 0.08);
+    z-index: 5;
+    overflow: hidden;
+    /* Slight taper: wider at top, narrower at bottom */
+    clip-path: polygon(8% 0%, 92% 0%, 85% 100%, 15% 100%);
 }
 
-.filling-2 {
-    top: 45%;
-    left: 55%;
-    width: 22px;
-    height: 14px;
-    background: radial-gradient(circle, #7bc67b 60%, #4a9e4a);
+/* Stacked horizontal slices for meat-layer texture */
+.meat-slice {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(205,133,63,0.12);
+}
+
+.slice-1  { top: 5%;  height: 7%; background: rgba(139,69,19,0.3); }
+.slice-2  { top: 14%; height: 8%; background: rgba(160,82,45,0.25); }
+.slice-3  { top: 24%; height: 6%; background: rgba(205,133,63,0.2); }
+.slice-4  { top: 32%; height: 9%; background: rgba(139,69,19,0.35); }
+.slice-5  { top: 43%; height: 7%; background: rgba(180,100,50,0.2); }
+.slice-6  { top: 52%; height: 8%; background: rgba(139,69,19,0.3); }
+.slice-7  { top: 62%; height: 6%; background: rgba(205,133,63,0.25); }
+.slice-8  { top: 70%; height: 8%; background: rgba(160,82,45,0.3); }
+.slice-9  { top: 80%; height: 6%; background: rgba(139,69,19,0.35); }
+.slice-10 { top: 88%; height: 5%; background: rgba(205,133,63,0.2); }
+.slice-11 { top: 95%; height: 4%; background: rgba(139,69,19,0.3); }
+.slice-12 { top: 12%; height: 5%; background: rgba(210,140,70,0.15); }
+
+/* Fat / crispy golden streaks (vertical highlights) */
+.meat-highlight {
+    position: absolute;
     border-radius: 40%;
-    box-shadow: 0 2px 8px rgba(123,198,123,0.4);
+    z-index: 6;
 }
 
-.filling-3 {
-    top: 60%;
-    left: 35%;
+.h-1 {
+    top: 15%;
+    left: 18%;
     width: 14px;
-    height: 14px;
-    background: radial-gradient(circle, #F5DEB3 60%, #DEB887);
-    box-shadow: 0 2px 8px rgba(245,222,179,0.4);
+    height: 45%;
+    background: linear-gradient(180deg, rgba(255,200,80,0.35) 0%, rgba(255,165,0,0.1) 100%);
+    transform: rotate(-3deg);
 }
 
-.filling-4 {
-    top: 35%;
-    left: 65%;
-    width: 16px;
-    height: 10px;
-    background: radial-gradient(circle, #ff4500 60%, #cc3700);
-    border-radius: 40%;
-    box-shadow: 0 2px 8px rgba(255,69,0,0.4);
+.h-2 {
+    top: 30%;
+    right: 20%;
+    width: 10px;
+    height: 35%;
+    background: linear-gradient(180deg, rgba(255,220,120,0.3) 0%, transparent 100%);
+    transform: rotate(2deg);
 }
 
-.filling-5 {
+.h-3 {
     top: 55%;
-    left: 58%;
-    width: 12px;
-    height: 12px;
-    background: radial-gradient(circle, #ffe4b5 60%, #ddc39e);
-    box-shadow: 0 2px 8px rgba(255,228,181,0.4);
+    left: 35%;
+    width: 18px;
+    height: 25%;
+    background: linear-gradient(180deg, rgba(200,140,60,0.25) 0%, transparent 100%);
+    transform: rotate(-1deg);
 }
 
-.doner-shadow {
-    width: 200px;
-    height: 30px;
-    background: radial-gradient(ellipse, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
-    margin-top: 20px;
-    animation: shadowPulse 4s ease-in-out infinite;
+/* --- Bottom base / drip tray --- */
+.spiess-base {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 80px;
+    height: 14px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg, #aaa 0%, #777 100%);
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    z-index: 11;
 }
 
-@keyframes spinDoner {
+/* --- Shadow on ground --- */
+.spiess-shadow {
+    width: 120px;
+    height: 24px;
+    margin-top: 12px;
+    background: radial-gradient(ellipse, rgba(255,215,0,0.18) 0%, transparent 70%);
+    animation: spiessFloatShadow 4s ease-in-out infinite;
+}
+
+/* === Animations === */
+@keyframes spiessSpin {
     from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
+    to   { transform: rotateY(360deg); }
 }
 
-@keyframes floatUpDown {
+@keyframes spiessFloat {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-25px); }
+    50%      { transform: translateY(-18px); }
 }
 
-@keyframes shadowPulse {
+@keyframes spiessFloatShadow {
     0%, 100% { transform: scaleX(1); opacity: 0.8; }
-    50% { transform: scaleX(0.7); opacity: 0.4; }
+    50%      { transform: scaleX(0.7); opacity: 0.4; }
 }
 
 /* Floating Ingredients */
@@ -1555,12 +1614,17 @@ img {
     }
 
     .hero-visual {
-        height: 350px;
+        height: 400px;
     }
 
-    .doner-3d {
-        width: 220px;
-        height: 220px;
+    .spiess-rotate {
+        width: 120px;
+        height: 300px;
+    }
+
+    .spiess-meat {
+        width: 100px;
+        height: 250px;
     }
 }
 
@@ -1596,12 +1660,17 @@ img {
     }
 
     .hero-visual {
-        height: 280px;
+        height: 320px;
     }
 
-    .doner-3d {
-        width: 180px;
-        height: 180px;
+    .spiess-rotate {
+        width: 100px;
+        height: 260px;
+    }
+
+    .spiess-meat {
+        width: 85px;
+        height: 210px;
     }
 
     .info-items {
