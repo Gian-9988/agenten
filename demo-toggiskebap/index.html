@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggi's Kebap — Döner | Pizza | Snack's and more | Wattwil</title>
+    <meta name="description" content="Toggi's Kebap in Wattwil – Frische Döner, knusprige Pizza, türkische Spezialitäten und mehr. Abhol- & Lieferservice. Jetzt online bestellen!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING / FLY-IN INTRO
+     ============================================================ -->
+<div id="intro-overlay" class="intro-overlay">
+    <div class="intro-content">
+        <div class="intro-map-pin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <p class="intro-text">Willkommen in Wattwil</p>
+        <div class="intro-logo-reveal">
+            <span class="intro-brand">TOGGI'S KEBAP</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+            <span class="brand-icon">🥙</span>
+            <span class="brand-name">TOGGI'S KEBAP</span>
+        </a>
+        <button id="navToggle" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#speisekarte" class="nav-link">Speisekarte</a></li>
+            <li><a href="#bestellen" class="nav-link">Bestellen</a></li>
+            <li><a href="#bewertungen" class="nav-link">Bewertungen</a></li>
+            <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section id="hero" class="hero">
+    <div class="hero-bg-particles" id="heroParticles"></div>
+    <div class="hero-content">
+        <div class="hero-text fade-up">
+            <p class="hero-tagline">Döner | Pizza | Snack's and more</p>
+            <h1 class="hero-title">TOGGI'S <span class="highlight">KEBAP</span></h1>
+            <p class="hero-subtitle">Frischeste Zutaten, eigene Kreationen<br>& Berliner Vibes im Toggenburg</p>
+            <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8 / 5 — 36 Bewertungen</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#bestellen" class="btn btn-primary">Jetzt bestellen</a>
+                <a href="#speisekarte" class="btn btn-outline">Speisekarte</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="doner-spinner">
+                <div class="doner-3d">
+                    <div class="doner-wrap">
+                        <div class="doner-body"></div>
+                        <div class="doner-filling filling-1"></div>
+                        <div class="doner-filling filling-2"></div>
+                        <div class="doner-filling filling-3"></div>
+                        <div class="doner-filling filling-4"></div>
+                        <div class="doner-filling filling-5"></div>
+                    </div>
+                </div>
+                <div class="doner-shadow"></div>
+            </div>
+            <div class="floating-ingredients">
+                <span class="ingredient ing-1">🍅</span>
+                <span class="ingredient ing-2">🥬</span>
+                <span class="ingredient ing-3">🧅</span>
+                <span class="ingredient ing-4">🌶️</span>
+                <span class="ingredient ing-5">🧀</span>
+                <span class="ingredient ing-6">🥒</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <span class="scroll-text">Mehr entdecken</span>
+        <span class="scroll-arrow">↓</span>
+    </div>
+</section>
+
+<!-- ============================================================
+     INFO BAR
+     ============================================================ -->
+<section class="info-bar">
+    <div class="container">
+        <div class="info-items">
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <span>Lindenhofstr. 2, 9630 Wattwil</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📞</span>
+                <a href="tel:+41715659221">071 565 92 21</a>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <span>Mo–Sa: 10:00–21:00 Uhr</span>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🚗</span>
+                <span>Abhol- &amp; Lieferservice</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SPEISEKARTE
+     ============================================================ -->
+<section id="speisekarte" class="section section-menu">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Unsere Spezialitäten</p>
+            <h2 class="section-title">Speisekarte</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- Menu Category Tabs -->
+        <div class="menu-tabs fade-up">
+            <button class="menu-tab active" data-category="kebap">🥙 Kebap &amp; Dürüm</button>
+            <button class="menu-tab" data-category="pizza">🍕 Pizza</button>
+            <button class="menu-tab" data-category="pide">🫓 Pide</button>
+            <button class="menu-tab" data-category="tuerkisch">🧆 Türkische Spezialitäten</button>
+            <button class="menu-tab" data-category="salate">🥗 Salate</button>
+            <button class="menu-tab" data-category="snacks">🍟 Snacks</button>
+            <button class="menu-tab" data-category="getraenke">🥤 Getränke</button>
+        </div>
+
+        <!-- KEBAP & DÜRÜM -->
+        <div class="menu-category active" id="cat-kebap">
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Döner Kebab <span class="size-badge">Klein</span></h3>
+                        <span class="menu-price">CHF 11.00</span>
+                    </div>
+                    <p class="menu-desc">Im knusprigen Taschenbrot mit saftigem Fleisch, frischem Salat und hausgemachter Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Kebab im Taschenbrot <span class="size-badge">Normal</span></h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Im knusprigen Taschenbrot mit saftigem Fleisch, frischem Salat und hausgemachter Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Mega Kebab im Taschenbrot</h3>
+                        <span class="menu-price">CHF 15.00</span>
+                    </div>
+                    <p class="menu-desc">Extra grosse Portion im knusprigen Taschenbrot mit allen Zutaten</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Dürüm <span class="size-badge">Klein</span></h3>
+                        <span class="menu-price">CHF 11.00</span>
+                    </div>
+                    <p class="menu-desc">Saftiges Fleisch mit Salat und hausgemachter Sauce im Fladenbrot</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Dürüm im Fladenbrot <span class="size-badge">Normal</span></h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Saftiges Fleisch mit frischem Salat und hausgemachter Sauce im Fladenbrot</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Mega Dürüm im Fladenbrot</h3>
+                        <span class="menu-price">CHF 15.00</span>
+                    </div>
+                    <p class="menu-desc">Extra grosse Portion im Fladenbrot mit allen Zutaten</p>
+                </div>
+                <div class="menu-card menu-card-special fade-up">
+                    <div class="menu-card-badge">⭐ Hausspezialität</div>
+                    <div class="menu-card-header">
+                        <h3>Toggi Kebab im Taschenbrot</h3>
+                        <span class="menu-price">CHF 16.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Fleisch, Pommes, Feta, Ei, frischem Salat und Sauce</p>
+                </div>
+                <div class="menu-card menu-card-special fade-up">
+                    <div class="menu-card-badge">⭐ Hausspezialität</div>
+                    <div class="menu-card-header">
+                        <h3>Toggi Dürüm im Fladenbrot</h3>
+                        <span class="menu-price">CHF 16.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Fleisch, Pommes, Feta, Ei, frischem Salat und Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>XXL Dürüm im Fladenbrot</h3>
+                        <span class="menu-price">CHF 19.00</span>
+                    </div>
+                    <p class="menu-desc">Unsere grösste Portion — für den extra grossen Hunger</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Dönerbox <span class="size-badge">Normal</span></h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Fleisch, Pommes, Salat und Sauce in der Box</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Dönerbox <span class="size-badge">XL</span></h3>
+                        <span class="menu-price">CHF 16.00</span>
+                    </div>
+                    <p class="menu-desc">Extra grosse Dönerbox mit mehr Fleisch, Pommes, Salat und Sauce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PIZZA -->
+        <div class="menu-category" id="cat-pizza">
+            <p class="menu-category-note fade-up">Alle Pizzen Ø 32cm mit Tomate, Mozzarella &amp; Oregano</p>
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Margherita</h3>
+                        <span class="menu-price">CHF 14.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Oregano</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Funghi</h3>
+                        <span class="menu-price">CHF 15.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Champignons</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Prosciutto</h3>
+                        <span class="menu-price">CHF 16.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Schinken</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Stromboli</h3>
+                        <span class="menu-price">CHF 16.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Salami, Schinken, Peperoni</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Oriental</h3>
+                        <span class="menu-price">CHF 16.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Kebabfleisch, Zwiebeln</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Calzone</h3>
+                        <span class="menu-price">CHF 16.50</span>
+                    </div>
+                    <p class="menu-desc">Gefüllte Pizza mit Schinken, Mozzarella, Tomate</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Salame</h3>
+                        <span class="menu-price">CHF 17.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Salami</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Sucuk</h3>
+                        <span class="menu-price">CHF 17.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, türkische Knoblauchwurst</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Napoli</h3>
+                        <span class="menu-price">CHF 17.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Sardellen, Kapern, Oliven</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Prosciutto e Funghi</h3>
+                        <span class="menu-price">CHF 17.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Schinken, Champignons</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Padroné</h3>
+                        <span class="menu-price">CHF 18.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, mariniertes Rindfleisch, Gemüse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Porcini</h3>
+                        <span class="menu-price">CHF 18.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Steinpilze</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pizza Frutti di Mare</h3>
+                        <span class="menu-price">CHF 19.50</span>
+                    </div>
+                    <p class="menu-desc">Tomate, Mozzarella, Meeresfrüchte</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PIDE -->
+        <div class="menu-category" id="cat-pide">
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Lahmacun</h3>
+                        <span class="menu-price">CHF 8.00</span>
+                    </div>
+                    <p class="menu-desc">Türkische Pizza mit Hackfleisch, Zwiebeln, Paprika</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Käse</h3>
+                        <span class="menu-price">CHF 12.00</span>
+                    </div>
+                    <p class="menu-desc">Türkisches Fladenbrot mit Käsefüllung</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Spinat</h3>
+                        <span class="menu-price">CHF 12.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Spinat und Käse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Hackfleisch</h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Mit gewürztem Hackfleisch</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Sucuk</h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Mit türkischer Knoblauchwurst und Käse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Döner</h3>
+                        <span class="menu-price">CHF 14.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Dönerfleisch und Käse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Poulet</h3>
+                        <span class="menu-price">CHF 14.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Pouletfleisch und Gemüse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pide Mix</h3>
+                        <span class="menu-price">CHF 15.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Hackfleisch, Sucuk, Käse und Gemüse</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TÜRKISCHE SPEZIALITÄTEN -->
+        <div class="menu-category" id="cat-tuerkisch">
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Börek Käse</h3>
+                        <span class="menu-price">CHF 10.00</span>
+                    </div>
+                    <p class="menu-desc">Knuspriger Blätterteig mit Käsefüllung</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Börek Spinat</h3>
+                        <span class="menu-price">CHF 10.00</span>
+                    </div>
+                    <p class="menu-desc">Knuspriger Blätterteig mit Spinat und Käse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Sandwich Poulet</h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Frisches Sandwich mit Pouletfleisch und Salat</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Sandwich Döner</h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Frisches Sandwich mit Dönerfleisch und Salat</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Taco Döner</h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Knuspriger Taco mit Dönerfleisch, Salat und Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Taco Poulet</h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Knuspriger Taco mit Pouletfleisch, Salat und Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Taco Falafel</h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Knuspriger Taco mit Falafel, Salat und Sauce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SALATE -->
+        <div class="menu-category" id="cat-salate">
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Gemischter Salat</h3>
+                        <span class="menu-price">CHF 8.00</span>
+                    </div>
+                    <p class="menu-desc">Frischer gemischter Salat mit Hausdressing</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Hirtensalat</h3>
+                        <span class="menu-price">CHF 10.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Tomaten, Gurken, Zwiebeln, Paprika und Feta</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Griechischer Salat</h3>
+                        <span class="menu-price">CHF 11.00</span>
+                    </div>
+                    <p class="menu-desc">Mit Feta, Oliven, Tomaten, Gurken und Zwiebeln</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Thunfisch Salat</h3>
+                        <span class="menu-price">CHF 12.00</span>
+                    </div>
+                    <p class="menu-desc">Gemischter Salat mit Thunfisch</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Poulet Salat</h3>
+                        <span class="menu-price">CHF 12.00</span>
+                    </div>
+                    <p class="menu-desc">Gemischter Salat mit gegrilltem Poulet</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Döner Salat</h3>
+                        <span class="menu-price">CHF 13.00</span>
+                    </div>
+                    <p class="menu-desc">Gemischter Salat mit Dönerfleisch und Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Caesar Salat</h3>
+                        <span class="menu-price">CHF 12.00</span>
+                    </div>
+                    <p class="menu-desc">Romana, Parmesan, Croutons, Caesar Dressing</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SNACKS -->
+        <div class="menu-category" id="cat-snacks">
+            <div class="menu-grid">
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pommes Frites</h3>
+                        <span class="menu-price">CHF 6.00</span>
+                    </div>
+                    <p class="menu-desc">Knusprige Pommes Frites</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Pommes mit Käse</h3>
+                        <span class="menu-price">CHF 8.00</span>
+                    </div>
+                    <p class="menu-desc">Pommes überbacken mit Käse</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Loaded Fries</h3>
+                        <span class="menu-price">CHF 10.00</span>
+                    </div>
+                    <p class="menu-desc">Pommes mit Dönerfleisch, Käse und Sauce</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Chicken Nuggets <span class="size-badge">6 Stk.</span></h3>
+                        <span class="menu-price">CHF 7.00</span>
+                    </div>
+                    <p class="menu-desc">Knusprige Chicken Nuggets mit Dip</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Chicken Nuggets <span class="size-badge">9 Stk.</span></h3>
+                        <span class="menu-price">CHF 9.00</span>
+                    </div>
+                    <p class="menu-desc">Knusprige Chicken Nuggets mit Dip</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Falafel <span class="size-badge">6 Stk.</span></h3>
+                        <span class="menu-price">CHF 7.00</span>
+                    </div>
+                    <p class="menu-desc">Hausgemachte Falafel mit Dip</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Zwiebelringe</h3>
+                        <span class="menu-price">CHF 6.00</span>
+                    </div>
+                    <p class="menu-desc">Knusprig panierte Zwiebelringe</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Mozzarella Sticks</h3>
+                        <span class="menu-price">CHF 7.00</span>
+                    </div>
+                    <p class="menu-desc">Panierte Mozzarella Sticks mit Dip</p>
+                </div>
+                <div class="menu-card fade-up">
+                    <div class="menu-card-header">
+                        <h3>Frühlingsrollen</h3>
+                        <span class="menu-price">CHF 6.00</span>
+                    </div>
+                    <p class="menu-desc">Knusprige Frühlingsrollen mit Sweet-Chili Sauce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GETRÄNKE -->
+        <div class="menu-category" id="cat-getraenke">
+            <h3 class="menu-subcategory-title fade-up">Alkoholfreie Getränke</h3>
+            <div class="menu-grid menu-grid-drinks">
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Coca-Cola 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Coca-Cola Zero 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Fanta 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Sprite 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Rivella 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Eistee 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Uludag 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Ayran 0.25l</h3>
+                        <span class="menu-price">CHF 3.50</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Ayran 0.5l</h3>
+                        <span class="menu-price">CHF 5.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Wasser 0.5l</h3>
+                        <span class="menu-price">CHF 3.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Mineral 0.5l</h3>
+                        <span class="menu-price">CHF 3.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Red Bull</h3>
+                        <span class="menu-price">CHF 5.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Orangensaft 0.33l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Apfelschorle 0.5l</h3>
+                        <span class="menu-price">CHF 4.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Capri-Sun</h3>
+                        <span class="menu-price">CHF 2.50</span>
+                    </div>
+                </div>
+            </div>
+            <h3 class="menu-subcategory-title fade-up">Alkoholische Getränke</h3>
+            <div class="menu-grid menu-grid-drinks">
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Bier 0.33l</h3>
+                        <span class="menu-price">CHF 5.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Bier 0.5l</h3>
+                        <span class="menu-price">CHF 6.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Efes 0.5l</h3>
+                        <span class="menu-price">CHF 6.00</span>
+                    </div>
+                </div>
+                <div class="menu-card menu-card-drink fade-up">
+                    <div class="menu-card-header">
+                        <h3>Radler 0.5l</h3>
+                        <span class="menu-price">CHF 5.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BESTELLEN (ORDER SYSTEM)
+     ============================================================ -->
+<section id="bestellen" class="section section-order">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Abhol- &amp; Lieferservice</p>
+            <h2 class="section-title">Online Bestellen</h2>
+            <div class="section-divider"></div>
+            <p class="section-desc">Vorbestellen oder liefern lassen — wähle deine Lieblingsgerichte und bestelle bequem online.</p>
+        </div>
+
+        <div class="order-form-wrapper fade-up">
+            <!-- Step 1: Delivery Type -->
+            <div class="order-step">
+                <h3 class="order-step-title"><span class="step-num">1</span> Abholen oder Liefern?</h3>
+                <div class="delivery-toggle">
+                    <button class="delivery-btn active" data-type="pickup" type="button">
+                        <span class="delivery-icon">🏪</span>
+                        <span>Abholung</span>
+                        <span class="delivery-sub">Kostenlos</span>
+                    </button>
+                    <button class="delivery-btn" data-type="delivery" type="button">
+                        <span class="delivery-icon">🚗</span>
+                        <span>Lieferung</span>
+                        <span class="delivery-sub">ab CHF 3.00</span>
+                    </button>
+                </div>
+                <div class="delivery-address-section" id="deliveryAddress" style="display:none;">
+                    <label for="orderAddress">Lieferadresse</label>
+                    <input type="text" id="orderAddress" placeholder="Strasse, Hausnummer, PLZ Ort" autocomplete="street-address">
+                    <div class="delivery-distance-info" id="deliveryInfo"></div>
+                    <div class="delivery-towns">
+                        <p class="towns-label">Liefergebiete &amp; Versandkosten:</p>
+                        <div class="town-badges">
+                            <span class="town-badge" data-fee="3">Wattwil <small>CHF 3.00</small></span>
+                            <span class="town-badge" data-fee="5">Ebnat-Kappel <small>CHF 5.00</small></span>
+                            <span class="town-badge" data-fee="5">Lichtensteig <small>CHF 5.00</small></span>
+                            <span class="town-badge" data-fee="7">Bütschwil <small>CHF 7.00</small></span>
+                            <span class="town-badge" data-fee="7">Ganterschwil <small>CHF 7.00</small></span>
+                            <span class="town-badge" data-fee="9">Bazenheid <small>CHF 9.00</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Time Selection -->
+            <div class="order-step">
+                <h3 class="order-step-title"><span class="step-num">2</span> Wann möchtest du bestellen?</h3>
+                <div class="time-selection">
+                    <div class="time-field">
+                        <label for="orderDay">Tag</label>
+                        <select id="orderDay"></select>
+                    </div>
+                    <div class="time-field">
+                        <label for="orderTime">Uhrzeit</label>
+                        <select id="orderTime"></select>
+                    </div>
+                </div>
+                <p class="time-note">Öffnungszeiten: Mo–Sa, 10:00–21:00 Uhr | Sonntag geschlossen</p>
+            </div>
+
+            <!-- Step 3: Item Selection -->
+            <div class="order-step">
+                <h3 class="order-step-title"><span class="step-num">3</span> Was möchtest du bestellen?</h3>
+
+                <div class="order-category-tabs">
+                    <button class="order-cat-tab active" data-ordercat="all" type="button">Alle</button>
+                    <button class="order-cat-tab" data-ordercat="kebap" type="button">Kebap</button>
+                    <button class="order-cat-tab" data-ordercat="pizza" type="button">Pizza</button>
+                    <button class="order-cat-tab" data-ordercat="pide" type="button">Pide</button>
+                    <button class="order-cat-tab" data-ordercat="tuerkisch" type="button">Spezialitäten</button>
+                    <button class="order-cat-tab" data-ordercat="salate" type="button">Salate</button>
+                    <button class="order-cat-tab" data-ordercat="snacks" type="button">Snacks</button>
+                    <button class="order-cat-tab" data-ordercat="getraenke" type="button">Getränke</button>
+                </div>
+
+                <div class="order-items-list" id="orderItemsList">
+                    <!-- Filled by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary" id="orderSummary" style="display:none;">
+                <h3 class="order-step-title"><span class="step-num">4</span> Deine Bestellung</h3>
+                <div class="summary-items" id="summaryItems"></div>
+                <div class="summary-totals">
+                    <div class="summary-line">
+                        <span>Zwischensumme</span>
+                        <span id="subtotalPrice">CHF 0.00</span>
+                    </div>
+                    <div class="summary-line" id="deliveryFeeLine" style="display:none;">
+                        <span>Liefergebühr</span>
+                        <span id="deliveryFeePrice">CHF 0.00</span>
+                    </div>
+                    <div class="summary-line summary-total">
+                        <span>Gesamtpreis</span>
+                        <span id="totalPrice">CHF 0.00</span>
+                    </div>
+                </div>
+                <div class="order-contact-fields">
+                    <input type="text" id="orderName" placeholder="Dein Name" required>
+                    <input type="tel" id="orderPhone" placeholder="Telefonnummer" required>
+                    <textarea id="orderNotes" placeholder="Bemerkungen (optional)" rows="2"></textarea>
+                </div>
+                <button class="btn btn-primary btn-order" id="submitOrder" type="button">
+                    🛒 Bestellung aufgeben
+                </button>
+            </div>
+        </div>
+
+        <!-- Order Confirmation Modal -->
+        <div class="order-modal" id="orderModal">
+            <div class="order-modal-content">
+                <div class="modal-success-icon">✅</div>
+                <h3>Bestellung aufgegeben!</h3>
+                <p>Vielen Dank für deine Bestellung bei <strong>Toggi's Kebap</strong>!</p>
+                <p class="modal-detail">Du bekommst in den nächsten Minuten eine Bestätigung, ob wir deine <span id="modalOrderType">Lieferung</span> ausführen können.</p>
+                <p class="modal-detail">Bei Fragen erreichst du uns unter <a href="tel:+41715659221">071 565 92 21</a>.</p>
+                <button class="btn btn-primary" id="closeModal" type="button">Alles klar!</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BEWERTUNGEN
+     ============================================================ -->
+<section id="bewertungen" class="section section-reviews">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Was unsere Kunden sagen</p>
+            <h2 class="section-title">Bewertungen</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="reviews-overview fade-up">
+            <div class="reviews-score">
+                <span class="score-big">4.8</span>
+                <div class="score-stars">★★★★★</div>
+                <span class="score-count">36 Bewertungen auf Google</span>
+            </div>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card fade-up">
+                <div class="review-header">
+                    <div class="review-avatar">GC</div>
+                    <div>
+                        <h4 class="review-name">Giuliano Cucinelli</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">Umbau ist gut. Kebap ist mal was anderes als die anderen in Wattwil. Brot war super knusprig und der Kebap war mega lecker. Sah alles sehr frisch aus. Die Sosse war der Hit. Hat sich wirklich gelohnt.</p>
+            </div>
+            <div class="review-card fade-up">
+                <div class="review-header">
+                    <div class="review-avatar">MB</div>
+                    <div>
+                        <h4 class="review-name">Marlon Bachleitner</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">Frischeste, feinste und auch eigene Zutaten. Bester Dönermann aus Berlin! Eigene Kreationen, neue vibes etc. Aufblühender Döner im Toggenburg.</p>
+            </div>
+            <div class="review-card fade-up">
+                <div class="review-header">
+                    <div class="review-avatar">AK</div>
+                    <div>
+                        <h4 class="review-name">Andrea K.</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">Ein leckerer Döner — alles perfekt! Sehr freundliches Personal und top Qualität. Komme auf jeden Fall wieder.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     KONTAKT
+     ============================================================ -->
+<section id="kontakt" class="section section-contact">
+    <div class="container">
+        <div class="section-header fade-up">
+            <p class="section-label">Besuche uns</p>
+            <h2 class="section-title">Kontakt &amp; Standort</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-card fade-up">
+                <div class="contact-icon">📍</div>
+                <h3>Adresse</h3>
+                <p>Toggi's Kebap</p>
+                <p>Lindenhofstrasse 2</p>
+                <p>9630 Wattwil</p>
+            </div>
+            <div class="contact-card fade-up">
+                <div class="contact-icon">📞</div>
+                <h3>Telefon</h3>
+                <a href="tel:+41715659221" class="contact-link">071 565 92 21</a>
+                <p class="contact-sub">Vorbestellung &amp; Lieferservice</p>
+            </div>
+            <div class="contact-card fade-up">
+                <div class="contact-icon">🕐</div>
+                <h3>Öffnungszeiten</h3>
+                <p><strong>Mo – Sa:</strong> 10:00 – 21:00 Uhr</p>
+                <p><strong>Sonntag:</strong> Geschlossen</p>
+            </div>
+            <div class="contact-card fade-up">
+                <div class="contact-icon">📸</div>
+                <h3>Social Media</h3>
+                <p>Folge uns auf Instagram</p>
+                <a href="https://instagram.com" class="contact-link" target="_blank" rel="noopener noreferrer">@toggiskebap</a>
+            </div>
+        </div>
+
+        <div class="map-container fade-up">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.8!2d9.0858!3d47.2998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b1e8a8a8a8a8a%3A0x8a8a8a8a8a8a8a8a!2sLindenhofstrasse%202%2C%209630%20Wattwil!5e0!3m2!1sde!2sch!4v1700000000000"
+                width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Toggi's Kebap Standort auf Google Maps"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">🥙 TOGGI'S KEBAP</span>
+                <p class="footer-tagline">Döner | Pizza | Snack's and more</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#speisekarte">Speisekarte</a>
+                <a href="#bestellen">Bestellen</a>
+                <a href="#bewertungen">Bewertungen</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+            <div class="footer-contact">
+                <p>Lindenhofstrasse 2, 9630 Wattwil</p>
+                <p><a href="tel:+41715659221">071 565 92 21</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Toggi's Kebap. Alle Rechte vorbehalten.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
