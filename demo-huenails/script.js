@@ -1,5 +1,5 @@
 /* =====================================================
-   HUENAILS NAGELSTUDIO — JavaScript Interaktionen
+   AURA NAILS WATTWIL — JavaScript Interaktionen
    Sticky Nav · Hamburger · Animationen · Formulare
    ===================================================== */
 
