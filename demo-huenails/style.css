@@ -158,7 +158,7 @@ img { max-width: 100%; display: block; }
     gap: 10px;
     text-decoration: none;
 }
-.logo-icon { font-size: 1.6rem; line-height: 1; }
+.logo-img { height: 42px; width: 42px; color: var(--rose-gold-dark); }
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-name {
     font-family: 'Playfair Display', serif;
