@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Nails Wattwil - Premium Nagelstudio in Wattwil. Luxuriöse Nageldesigns, Maniküre und Pediküre. Jetzt Termin buchen!">
+    <title>Aura Nails Wattwil — Premium Nagelstudio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --nude-light: #f5e6d3;
+            --nude-medium: #e8d5c4;
+            --rose: #d4a5a5;
+            --rose-light: #f0d5d5;
+            --gold: #c9a961;
+            --gold-light: #e8d7a8;
+            --white: #ffffff;
+            --gray-text: #5a5a5a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--gray-text);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--gray-text);
+        }
+
+        /* ============ SPLASH SCREEN ANIMATION ============ */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--nude-light) 0%, var(--rose-light) 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        #splash-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .brush-container {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .nail-brush {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+            animation: brushSwipe 3s ease-in-out forwards;
+        }
+
+        @keyframes brushSwipe {
+            0% {
+                left: -80px;
+            }
+            70% {
+                left: 420px;
+            }
+            100% {
+                left: 420px;
+            }
+        }
+
+        .brush-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        .brush-trail {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--rose) 0%, var(--gold) 100%);
+            transform: translateY(-50%);
+            animation: trailGrow 2.5s ease-out forwards;
+            box-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+        }
+
+        @keyframes trailGrow {
+            0% {
+                width: 0;
+            }
+            70% {
+                width: 400px;
+            }
+            100% {
+                width: 400px;
+            }
+        }
+
+        .splash-text {
+            text-align: center;
+            opacity: 0;
+            animation: textFadeIn 1s ease 1.5s forwards;
+        }
+
+        .splash-text h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--gray-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .splash-text p {
+            font-size: 1.2rem;
+            color: var(--rose);
+        }
+
+        @keyframes textFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ============ ANIMATED BACKGROUND ============ */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .aura {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .aura-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--rose-light) 0%, transparent 70%);
+            top: -100px;
+            left: -100px;
+            animation-delay: 0s;
+        }
+
+        .aura-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
+            top: 50%;
+            right: -150px;
+            animation-delay: 3s;
+        }
+
+        .aura-3 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--nude-medium) 0%, transparent 70%);
+            bottom: -100px;
+            left: 30%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -30px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+
+        /* ============ NAVIGATION ============ */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--nude-light) 0%, var(--white) 50%, var(--rose-light) 100%);
+        }
+
+        /* ============ PRICE CARDS ============ */
+        .price-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--nude-medium);
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        /* ============ BOOKING SYSTEM ============ */
+        .service-checkbox {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: var(--nude-light);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .service-checkbox:hover {
+            background: var(--nude-medium);
+            transform: translateX(5px);
+        }
+
+        .service-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 1rem;
+            cursor: pointer;
+            accent-color: var(--gold);
+        }
+
+        .booking-summary {
+            background: linear-gradient(135deg, var(--rose-light) 0%, var(--nude-light) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+            border: 2px solid var(--gold);
+        }
+
+        /* ============ MODAL ============ */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            text-align: center;
+            transform: scale(0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        /* ============ REVIEWS ============ */
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        /* ============ INSTAGRAM GRID ============ */
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .insta-item {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--nude-light);
+        }
+
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .insta-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* ============ UTILITIES ============ */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--rose) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--rose);
+            margin-bottom: 3rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--nude-medium);
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .splash-text h1 {
+                font-size: 2rem;
+            }
+
+            .brush-container {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============ SPLASH SCREEN ============ -->
+    <div id="splash-screen">
+        <div class="brush-container">
+            <div class="brush-trail"></div>
+            <div class="nail-brush">
+                <svg class="brush-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brushGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#8b6f47"/>
+                            <stop offset="100%" stop-color="#5a4a35"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Brush handle -->
+                    <rect x="25" y="5" width="10" height="35" rx="3" fill="url(#brushGrad)"/>
+                    <!-- Brush ferrule -->
+                    <ellipse cx="30" cy="40" rx="8" ry="4" fill="#c9a961"/>
+                    <!-- Brush bristles -->
+                    <path d="M 22 40 Q 22 50 30 55 Q 38 50 38 40 Z" fill="#3a3a3a"/>
+                    <!-- Paint on tip -->
+                    <ellipse cx="30" cy="54" rx="6" ry="3" fill="#d4a5a5"/>
+                </svg>
+            </div>
+        </div>
+        <div class="splash-text">
+            <h1>Willkommen bei Aura Nails</h1>
+            <p>Premium Nagelstudio Wattwil</p>
+        </div>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Aura Nails Logo - Premium Nagelstudio Wattwil" class="logo-img">
+                    <div>
+                        <div class="text-xl font-semibold" style="font-family: 'Cormorant Garamond', serif; color: var(--gray-text);">Aura Nails</div>
+                        <div class="text-sm" style="color: var(--rose);">Wattwil</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="hover:text-rose-400 transition">Startseite</a>
+                    <a href="#services" class="hover:text-rose-400 transition">Dienstleistungen</a>
+                    <a href="#booking" class="hover:text-rose-400 transition">Termin buchen</a>
+                    <a href="#contact" class="hover:text-rose-400 transition">Kontakt</a>
+                </div>
+                <a href="#booking" class="btn-primary hidden md:inline-block">Jetzt buchen</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="home" class="hero">
+        <div class="animated-bg">
+            <div class="aura aura-1"></div>
+            <div class="aura aura-2"></div>
+            <div class="aura aura-3"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <img src="hero-nails.jpg" alt="Hyper-realistic close-up photo of perfectly manicured hands with elegant nude gel nails featuring subtle gold accents and delicate marble design, photographed in soft natural lighting on white silk fabric, professional nail salon photography" class="hidden">
+
+            <div class="mb-6">
+                <span class="inline-block px-4 py-2 rounded-full text-sm" style="background: rgba(201, 169, 97, 0.2); color: var(--gold);">
+                    ✨ Premium Nagelstudio in Wattwil
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6" style="font-family: 'Cormorant Garamond', serif;">
+                Luxus für Ihre Nägel
+            </h1>
+
+            <p class="text-xl md:text-2xl mb-4 max-w-3xl mx-auto" style="color: var(--rose);">
+                Eleganz, Schönheit und Perfektion
+            </p>
+
+            <p class="text-lg mb-12 max-w-2xl mx-auto">
+                Willkommen bei Aura Nails Wattwil – Ihrem exklusiven Nagelstudio für erstklassiges Nageldesign,
+                professionelle Maniküre und entspannende Pediküre in luxuriösem Ambiente.
+            </p>
+
+            <a href="#booking" class="btn-primary text-lg">Termin buchen</a>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES & PRICES ============ -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Unsere Dienstleistungen</h2>
+                <p class="section-subtitle">Premium Qualität zu fairen Preisen</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Nageldesign -->
+                <div class="price-card">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-3">💅</div>
+                        <h3 class="text-2xl font-semibold mb-2" style="font-family: 'Cormorant Garamond', serif;">Nageldesign</h3>
+                        <p class="text-sm" style="color: var(--rose);">Mit Flüssig-Gel</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="mb-4">
+                            <p class="font-semibold mb-2 text-sm" style="color: var(--gold);">NEUMODELLAGE</p>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Nature</span>
+                                <span class="font-semibold">55 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Farbe/Glitzer</span>
+                                <span class="font-semibold">65 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Ombre/French</span>
+                                <span class="font-semibold">70 CHF</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="font-semibold mb-2 text-sm" style="color: var(--gold);">AUFFÜLLEN</p>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Nature</span>
+                                <span class="font-semibold">50 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Farbe/Glitzer</span>
+                                <span class="font-semibold">60 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Ombre/French</span>
+                                <span class="font-semibold">65 CHF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farbe & Lack -->
+                <div class="price-card">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-3">✨</div>
+                        <h3 class="text-2xl font-semibold mb-2" style="font-family: 'Cormorant Garamond', serif;">Farbe & Lack</h3>
+                        <p class="text-sm" style="color: var(--rose);">Perfekter Glanz</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Gel-Lack</span>
+                            <span class="font-semibold">35 CHF</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Shell-Lack</span>
+                            <span class="font-semibold">35 CHF</span>
+                        </div>
+                    </div>
+
+                    <img src="gel-polish.jpg" alt="Hyper-realistic professional photo of elegant female hands with freshly applied glossy gel nail polish in soft nude pink color, perfect shine and smooth finish, shot in luxury nail salon with soft diffused lighting" class="mt-6 rounded-lg w-full h-48 object-cover">
+                </div>
+
+                <!-- Hand- & Fußpflege -->
+                <div class="price-card">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-3">🌸</div>
+                        <h3 class="text-2xl font-semibold mb-2" style="font-family: 'Cormorant Garamond', serif;">Hand- & Fußpflege</h3>
+                        <p class="text-sm" style="color: var(--rose);">Entspannung pur</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="mb-4">
+                            <p class="font-semibold mb-2 text-sm" style="color: var(--gold);">MANIKÜRE</p>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Maniküre</span>
+                                <span class="font-semibold">20 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Mit Gel/Shell-Lack</span>
+                                <span class="font-semibold">45 CHF</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold mb-2 text-sm" style="color: var(--gold);">PEDIKÜRE</p>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Pediküre</span>
+                                <span class="font-semibold">45 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Mit Farbe/Glitzer</span>
+                                <span class="font-semibold">70 CHF</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span>Mit French</span>
+                                <span class="font-semibold">75 CHF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extras -->
+                <div class="price-card lg:col-span-3">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-3">💎</div>
+                        <h3 class="text-2xl font-semibold mb-2" style="font-family: 'Cormorant Garamond', serif;">Extras & Zusatzleistungen</h3>
+                        <p class="text-sm" style="color: var(--rose);">Das gewisse Extra</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Lange Nägel</span>
+                            <span class="font-semibold">+10 CHF</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Handdesign pro Nagel</span>
+                            <span class="font-semibold">ab 5 CHF</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Gelnägel entfernen</span>
+                            <span class="font-semibold">30 CHF</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-100">
+                            <span>Reparatur 1 Nagel</span>
+                            <span class="font-semibold">10 CHF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BOOKING SYSTEM ============ -->
+    <section id="booking" class="py-20" style="background: linear-gradient(135deg, var(--nude-light) 0%, var(--white) 100%);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Termin buchen</h2>
+                <p class="section-subtitle">Wählen Sie Ihre gewünschten Dienstleistungen</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+                <form id="bookingForm">
+                    <!-- Services Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-4" style="font-family: 'Cormorant Garamond', serif;">Dienstleistungen auswählen</h3>
+                        <div id="servicesContainer" class="space-y-2 max-h-96 overflow-y-auto pr-2">
+                            <!-- Services will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Booking Summary -->
+                    <div id="bookingSummary" class="booking-summary mb-8" style="display: none;">
+                        <h3 class="text-xl font-semibold mb-4" style="font-family: 'Cormorant Garamond', serif;">Ihre Auswahl</h3>
+                        <div id="selectedServices" class="mb-4"></div>
+                        <div class="flex justify-between items-center mb-2 text-lg">
+                            <span class="font-semibold">Gesamtpreis:</span>
+                            <span id="totalPrice" class="text-2xl font-bold" style="color: var(--gold);">0 CHF</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm" style="color: var(--rose);">
+                            <span>Geschätzte Dauer:</span>
+                            <span id="totalDuration">0 Min</span>
+                        </div>
+                    </div>
+
+                    <!-- Customer Details -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block mb-2 font-semibold">Name *</label>
+                            <input type="text" id="customerName" required placeholder="Ihr Name">
+                        </div>
+                        <div>
+                            <label class="block mb-2 font-semibold">E-Mail-Adresse *</label>
+                            <input type="email" id="customerEmail" required placeholder="ihre@email.ch">
+                        </div>
+                    </div>
+
+                    <!-- Date & Time -->
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <label class="block mb-2 font-semibold">Datum *</label>
+                            <input type="date" id="bookingDate" required>
+                        </div>
+                        <div>
+                            <label class="block mb-2 font-semibold">Uhrzeit *</label>
+                            <input type="time" id="bookingTime" required min="09:00" max="19:00">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full text-lg py-4">
+                        Buchung anfragen
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Das sagen unsere Kunden</h2>
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <div class="stars">★★★★★</div>
+                    <span class="text-xl font-semibold">4,7 Sterne</span>
+                    <span class="text-gray-500">(60 Rezensionen)</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="review-card">
+                    <div class="stars mb-3">★★★★★</div>
+                    <p class="mb-4 text-lg italic">"Absolut professionell und wunderschöne Nägel! Das Ambiente ist luxuriös und entspannend. Ich komme definitiv wieder!"</p>
+                    <p class="font-semibold">- Sarah M.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars mb-3">★★★★★</div>
+                    <p class="mb-4 text-lg italic">"Beste Maniküre, die ich je hatte! Die Liebe zum Detail und die Qualität sind unübertroffen. Sehr empfehlenswert!"</p>
+                    <p class="font-semibold">- Anna K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INSTAGRAM ============ -->
+    <section class="py-20" style="background: linear-gradient(135deg, var(--rose-light) 0%, var(--nude-light) 100%);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="section-title">Folgen Sie uns auf Instagram</h2>
+                <p class="section-subtitle">@auranails_wattwil</p>
+                <a href="https://www.instagram.com/auranails_wattwil/" target="_blank" rel="noopener noreferrer" class="btn-primary inline-block mt-4">
+                    Folgen auf Instagram
+                </a>
+            </div>
+
+            <div class="insta-grid">
+                <div class="insta-item">
+                    <img src="insta1.jpg" alt="Hyper-realistic Instagram-style photo of perfectly manicured nude gel nails with delicate gold foil accents, elegant finger positioning on white marble surface, professional nail art photography with soft natural lighting and shallow depth of field" loading="lazy">
+                </div>
+                <div class="insta-item">
+                    <img src="insta2.jpg" alt="Hyper-realistic close-up photo of luxurious french manicure with subtle ombre effect from nude to soft pink, photographed on rose gold silk fabric in premium nail salon setting with professional studio lighting" loading="lazy">
+                </div>
+                <div class="insta-item">
+                    <img src="insta3.jpg" alt="Hyper-realistic professional photograph of elegant almond-shaped gel nails in champagne nude color with micro gold glitter accent on ring finger, shot against soft beige background with professional beauty lighting" loading="lazy">
+                </div>
+                <div class="insta-item">
+                    <img src="insta4.jpg" alt="Hyper-realistic beauty photography of perfectly polished rose gold chrome gel nails on gracefully positioned hands, luxury nail salon atmosphere, soft focus background with bokeh effect, professional commercial photography" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT & FOOTER ============ -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h3 class="text-xl font-semibold mb-2">Adresse</h3>
+                    <p>Bahnhofstrasse 22<br>9630 Wattwil</p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">📞</div>
+                    <h3 class="text-xl font-semibold mb-2">Telefon</h3>
+                    <p><a href="tel:0765275116" class="hover:text-rose-400 transition">076 527 51 16</a></p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <h3 class="text-xl font-semibold mb-2">Öffnungszeiten</h3>
+                    <p>Montag - Samstag<br>9:00 - 19:00 Uhr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="py-12" style="background: linear-gradient(135deg, var(--gray-text) 0%, #3a3a3a 100%); color: white;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="logo.png" alt="Aura Nails Logo - Premium Nagelstudio Wattwil" class="logo-img">
+                    <div>
+                        <div class="text-xl font-semibold" style="font-family: 'Cormorant Garamond', serif;">Aura Nails</div>
+                        <div class="text-sm" style="color: var(--rose-light);">Premium Nagelstudio Wattwil</div>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="mb-2">Bahnhofstrasse 22, 9630 Wattwil</p>
+                    <p class="mb-2">Tel: 076 527 51 16</p>
+                    <p>© 2024 Aura Nails Wattwil. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SUCCESS MODAL ============ -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="text-6xl mb-6">✨</div>
+            <h2 class="text-3xl font-bold mb-4" style="font-family: 'Cormorant Garamond', serif;">Vielen Dank, <span id="modalName"></span>!</h2>
+            <p class="text-lg mb-4">Dies ist eine Demo-Seite.</p>
+            <div id="modalDetails" class="mb-6 p-4 rounded-lg" style="background: var(--nude-light);"></div>
+            <p class="mb-6 text-sm text-gray-600">Es wurde keine echte E-Mail versendet.</p>
+            <button id="closeModal" class="btn-primary">Verstanden</button>
+        </div>
+    </div>
+
+    <script>
+        // ============ SERVICES DATA ============
+        const services = [
+            // Nageldesign
+            { name: 'Neumodellage Nature', price: 55, duration: 60, category: 'Nageldesign' },
+            { name: 'Neumodellage Farbe/Glitzer', price: 65, duration: 60, category: 'Nageldesign' },
+            { name: 'Neumodellage Ombre/French', price: 70, duration: 70, category: 'Nageldesign' },
+            { name: 'Auffüllen Nature', price: 50, duration: 45, category: 'Nageldesign' },
+            { name: 'Auffüllen Farbe/Glitzer', price: 60, duration: 45, category: 'Nageldesign' },
+            { name: 'Auffüllen Ombre/French', price: 65, duration: 50, category: 'Nageldesign' },
+            // Farbe & Lack
+            { name: 'Gel-Lack', price: 35, duration: 30, category: 'Farbe & Lack' },
+            { name: 'Shell-Lack', price: 35, duration: 30, category: 'Farbe & Lack' },
+            // Hand- & Fußpflege
+            { name: 'Maniküre', price: 20, duration: 30, category: 'Hand- & Fußpflege' },
+            { name: 'Maniküre mit Gel/Shell-Lack', price: 45, duration: 45, category: 'Hand- & Fußpflege' },
+            { name: 'Pediküre', price: 45, duration: 45, category: 'Hand- & Fußpflege' },
+            { name: 'Pediküre mit Farbe/Glitzer', price: 70, duration: 60, category: 'Hand- & Fußpflege' },
+            { name: 'Pediküre mit French', price: 75, duration: 60, category: 'Hand- & Fußpflege' },
+            // Extras
+            { name: 'Lange Nägel', price: 10, duration: 10, category: 'Extras' },
+            { name: 'Handdesign pro Nagel', price: 5, duration: 5, category: 'Extras' },
+            { name: 'Gelnägel entfernen', price: 30, duration: 20, category: 'Extras' },
+            { name: 'Reparatur 1 Nagel', price: 10, duration: 15, category: 'Extras' }
+        ];
+
+        // ============ SPLASH SCREEN ============
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('splash-screen').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('splash-screen').style.display = 'none';
+                }, 800);
+            }, 3000);
+        });
+
+        // ============ POPULATE SERVICES ============
+        const servicesContainer = document.getElementById('servicesContainer');
+        let currentCategory = '';
+
+        services.forEach((service, index) => {
+            if (service.category !== currentCategory) {
+                currentCategory = service.category;
+                const categoryHeader = document.createElement('div');
+                categoryHeader.className = 'font-semibold mt-4 mb-2 text-sm';
+                categoryHeader.style.color = 'var(--gold)';
+                categoryHeader.textContent = currentCategory.toUpperCase();
+                servicesContainer.appendChild(categoryHeader);
+            }
+
+            const serviceDiv = document.createElement('label');
+            serviceDiv.className = 'service-checkbox';
+            serviceDiv.innerHTML = `
+                <input type="checkbox" value="${index}" onchange="updateBooking()">
+                <span class="flex-1">${service.name}</span>
+                <span class="font-semibold" style="color: var(--gold);">${service.price} CHF</span>
+            `;
+            servicesContainer.appendChild(serviceDiv);
+        });
+
+        // ============ BOOKING CALCULATION ============
+        function updateBooking() {
+            const checkboxes = document.querySelectorAll('#servicesContainer input[type="checkbox"]:checked');
+            const summary = document.getElementById('bookingSummary');
+            const selectedServicesDiv = document.getElementById('selectedServices');
+
+            if (checkboxes.length === 0) {
+                summary.style.display = 'none';
+                return;
+            }
+
+            summary.style.display = 'block';
+
+            let totalPrice = 0;
+            let totalDuration = 0;
+            let selectedHTML = '<ul class="space-y-1">';
+
+            checkboxes.forEach(checkbox => {
+                const service = services[parseInt(checkbox.value)];
+                totalPrice += service.price;
+                totalDuration += service.duration;
+                selectedHTML += `<li>• ${service.name} - ${service.price} CHF</li>`;
+            });
+
+            selectedHTML += '</ul>';
+            selectedServicesDiv.innerHTML = selectedHTML;
+            document.getElementById('totalPrice').textContent = `${totalPrice} CHF`;
+            document.getElementById('totalDuration').textContent = `${totalDuration} Min`;
+        }
+
+        // ============ DATE VALIDATION ============
+        const dateInput = document.getElementById('bookingDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // ============ FORM SUBMISSION ============
+        document.getElementById('bookingForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('customerName').value;
+            const email = document.getElementById('customerEmail').value;
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+
+            const checkboxes = document.querySelectorAll('#servicesContainer input[type="checkbox"]:checked');
+
+            if (checkboxes.length === 0) {
+                alert('Bitte wählen Sie mindestens eine Dienstleistung aus.');
+                return;
+            }
+
+            // Validate opening hours
+            const selectedTime = parseInt(time.split(':')[0]);
+            if (selectedTime < 9 || selectedTime >= 19) {
+                alert('Bitte wählen Sie eine Uhrzeit zwischen 9:00 und 19:00 Uhr.');
+                return;
+            }
+
+            const selectedServices = Array.from(checkboxes).map(cb =>
+                services[parseInt(cb.value)].name
+            ).join(', ');
+
+            const totalPrice = Array.from(checkboxes).reduce((sum, cb) =>
+                sum + services[parseInt(cb.value)].price, 0
+            );
+
+            // Format date
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('de-CH', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Show modal
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalDetails').innerHTML = `
+                <p class="font-semibold mb-2">Ihre Anfrage:</p>
+                <p><strong>Dienstleistungen:</strong> ${selectedServices}</p>
+                <p><strong>Datum:</strong> ${formattedDate}</p>
+                <p><strong>Uhrzeit:</strong> ${time} Uhr</p>
+                <p><strong>Gesamtpreis:</strong> ${totalPrice} CHF</p>
+                <p><strong>E-Mail:</strong> ${email}</p>
+            `;
+
+            const modal = document.getElementById('successModal');
+            modal.classList.add('show');
+
+            // Reset form
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingSummary').style.display = 'none';
+        });
+
+        // ============ CLOSE MODAL ============
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('successModal').classList.remove('show');
+        });
+
+        document.getElementById('successModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('successModal')) {
+                document.getElementById('successModal').classList.remove('show');
+            }
+        });
+
+        // ============ SMOOTH SCROLLING ============
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
